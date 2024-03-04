@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla::header"></header>
+        <!-- Sección principal para mostrar la informaccion de la bienvenida -->
+        <section th:fragment="index" id="bienvenida" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Bienvenidos</h1>
+                </div>
+                <div class="text-center lh-base mt-3 p-1">
+                    <p class="fs-4">Colegio el Saber es una institución de educación secundaria que se enfoca en la formación integral de sus estudiantes, promoviendo valores y ciudadanía activa. 
+                        Su enfoque educativo se basa en la pedagogía del amor, la investigación y el trabajo en equipo. 
+                        Fomenta el descubrimiento a través de la curiosidad, permitiendo a los alumnos explorar perspectivas internacionales y desarrollar habilidades para ser ciudadanos responsables.</p>
+                    <!-- Botón -->
+                    <div><a class="btn text-light fs-5 mb-3 mt-3 rounded-0" th:href="@{/quienesSomos}" role="button" style="background-color: #0CBBC7;">
+                            Más Información
+                        </a>
+                    </div>
+
+                    <!-- Imagen -->
+                    <img src="https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt = "Imagen de alumna en la pizarra resolviendo un ejercicio matemático" height="650" style="display: block; margin: auto; padding: 20px;"/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </section>
+        <!-- Sección principal para mostrar la informaccion del personal docente -->
+        <section th:fragment="personal" id="personal" style="margin-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-center mt-5 p-1">
+                            <!-- Titulo -->
+                            <h2>Profesores Capacitados</h2>
+                        </div>
+                        <div class="text-start lh-base mt-3 p-1">
+                            <p class="fs-4">El personal docente, conjuntamente con el administrativo, de apoyo y de servicio, constituyen la columna vertebral de nuestro quehacer educativo, la mayoría de nuestros docentes tienen un título académico de maestría. 
+                                Su valiosa participación en las diferentes actividades del colegio permite que se realice con éxito nuestro proyecto educativo.</p>
+                            <!-- Botón -->
+                            <div><a class="btn text-light fs-5 mb-3 mt-3 rounded-0" th:href="@{/personal}" role="button" style="background-color: #0CBBC7;">
+                                    Ver Personal
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Imagen -->
+                        <img src="https://assets-global.website-files.com/646ff4554f90b915da8582ab/648a722909291020253b6114_10.jpg" alt="Imagen de alumna estudiando en la biblioteca" height="350" style="display: block; margin: auto; padding: 20px;" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección principal para mostrar la informaccion de la metodologia -->
+        <section th:fragment="metodologia" id="bienvenida" style="background-color: #EDFEFF; margin-top: 100px;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h2>Metodología</h2>
+                </div>
+                <div class="text-start lh-base mt-3 p-1">
+                    <!-- subtitulo -->
+                    <h3>STEAM</h3>
+                    <p class="fs-4 mb-5">Es la distinción ofrecida a nivel institucional ante los logros en la perspectiva científico tecnológica de alto nivel en las competencias nacionales e internacionales de robótica, STEAM, ofimática y/o similares.</p>
+                    
+                    <!-- Video -->
+                   <iframe width="560" height="350"
+                           style="display: block; margin: auto;"
+                           src="https://www.youtube.com/embed/5b2hO5PSCrY" title="¿Qué es la educación STEAM? | #PalabraMaestra" frameborder="0" 
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </section>
+        <footer th:replace="layout/plantilla::footer"></footer>
+    </body>
+</html>
+

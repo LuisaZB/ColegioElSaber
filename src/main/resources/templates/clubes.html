@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla::header"></header>
+        <section th:replace="informacion/clubesInformacion :: resumenClubes"/>
+        <section th:replace="informacion/clubesInformacion :: clubArte"/>
+        <section th:replace="informacion/clubesInformacion :: clubCiencia"/>
+        <section th:replace="informacion/clubesInformacion :: clubFutbol"/>
+        <section th:replace="informacion/clubesInformacion :: clubAmbiente"/>
+        <footer th:replace="layout/plantilla::footer"></footer>
+    </body>
+</html>
+

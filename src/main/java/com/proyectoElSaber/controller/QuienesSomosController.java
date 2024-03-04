@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-public class IndexController {
+public class QuienesSomosController {
     
-    @RequestMapping("/")
+    @RequestMapping("/quienesSomos")
     public String page(Model model) {
         model.addAttribute("attribute", "value");
-        return "index";
+        return "quienesSomos";
     }
     
 }

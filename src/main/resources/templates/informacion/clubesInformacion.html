@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla::header"></header>
+        <!-- Sección principal para mostrar la informaccion der resumen de los clubes -->
+        <section th:fragment="resumenClubes" id="resumenClubes" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Clubes</h1>
+                </div>
+                <div class="text-center lh-base mt-3 p-1">
+                    <p class="fs-4">Los clubes en un colegio ofrecen a los estudiantes la oportunidad de explorar intereses y pasatiempos, desarrollar habilidades específicas, socializar con compañeros afines, 
+                        asumir roles de liderazgo y enriquecer su experiencia educativa. Son espacios que fomentan la diversidad de intereses y el crecimiento personal y social fuera del aula.</p>
+                    <!-- Imagen -->
+                    <img src="https://img.remediosdigitales.com/809c5a/pexels-max-fischer-5212700/1366_2000.jpeg" alt = "Imagen de niños celebrando" height="650" style="display: block; margin: auto; padding: 20px;"/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </section>
+        <!-- Sección principal para mostrar la informaccion del club de arte -->
+        <section th:fragment="clubArte" id="clubArte" style="margin-top: 100px;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Club de Arte Creativo</h1>
+                </div>
+                <div class="text-start lh-base mt-3 p-1">
+                    <p class="fs-4 mb-5">Este club ofrece a los estudiantes la oportunidad de explorar su creatividad a través de diversas formas de arte, como pintura, dibujo, escultura y artesanía. 
+                        Los miembros pueden participar en proyectos individuales y grupales, compartir ideas y técnicas, y exhibir su trabajo en eventos escolares.</p>
+                    <!-- imagen -->
+                    <img src="https://www.elgrannegocio.com/wp-content/uploads/emprender-arte-cultura.jpg" alt="Imagen de pinceles" height="350"style="display: block; margin: auto;" />
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </section>
+        <!-- Sección principal para mostrar la informaccion del club de ciencia y experimento -->
+        <section th:fragment="clubCiencia" id="clubCiencia" style="background-color: #EDFEFF; margin-top: 100px;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Club de Ciencia y Experimento</h1>
+                </div>
+                <div class="text-start lh-base mt-3 p-1">
+                    <p class="fs-4 mb-5">Perfecto para jóvenes científicos y exploradores curiosos. En este club, los estudiantes realizan experimentos científicos, exploran varios  conceptos como: de física, química, 
+                        biología, astronomía, entre otros. Participan en ferias de ciencias y proyectos de investigación.</p>
+                    <!-- imagen -->
+                    <img src="https://chromatific.com/wp-content/uploads/2019/09/analysis-background-bacteria-2280549-1-1024x683.jpg" alt="Imagen de varios reactivos químicos" height="350"style="display: block; margin: auto;" />
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </section>
+        <!-- Sección principal para mostrar la informaccion del club de futbol -->
+        <section th:fragment="clubFutbol" id="clubFutbol" style="margin-top: 100px;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Club de Fútbol</h1>
+                </div>
+                <div class="text-start lh-base mt-3 p-1">
+                    <p class="fs-4 mb-5">EComo mencionado anteriormente, este club es para los amantes del fútbol, ofreciendo oportunidades para practicar, competir y disfrutar del deporte en un ambiente de equipo y compañerismo.</p>
+                    <!-- imagen -->
+                    <img src="https://images.pexels.com/photos/8910026/pexels-photo-8910026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Imagen de cancha de futbol" height="350"style="display: block; margin: auto;" />
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </section>
+        <!-- Sección principal para mostrar la informaccion del club de medio ambiente y sostenibilidad -->
+        <section th:fragment="clubAmbiente" id="clubAmbiente" style="background-color: #EDFEFF; margin-top: 100px;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Club de Medio Ambiente y Sostenibilidad</h1>
+                </div>
+                <div class="text-start lh-base mt-3 p-1">
+                    <p class="fs-4 mb-5">Este club está dirigido a estudiantes preocupados por el medio ambiente y la conservación. Los miembros trabajan juntos en proyectos relacionados con la sostenibilidad, como la jardinería escolar, 
+                              la gestión de residuos, la conservación de la energía y la concienciación ambiental en la comunidad escolar.</p>
+                    <!-- imagen -->
+                    <img src="https://www.almacenesrivera.com/cuidados-para-el-jardin-en-oto%C3%B1o_img174144t1.jpg" alt="Imagen de personap plantando plántulas de tomate" height="350"style="display: block; margin: auto;" />
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </section>
+        <footer th:replace="layout/plantilla::footer"></footer>
+    </body>
+</html>
+

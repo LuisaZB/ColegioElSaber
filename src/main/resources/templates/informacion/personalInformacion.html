@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla::header"></header>
+        <!-- Sección principal para mostrar la informaccion de resumen -->
+        <section th:fragment="resumenPersonal" id="resumenPersonal" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Personal docente y administrativo</h1>
+                </div>
+                <div class="text-center lh-base mt-3 p-1">
+                    <p class="fs-4">Si usted desea agendar un cita le recomendamos consultar el horario de atención de nuestro personal y establecer comunicación con ellos mediante el correo</p>
+                </div>
+            </div>
+        </section>
+        <!-- Sección de primera fila del personal -->
+        <section th:fragment="primeraFila" class="primeraFila" style="margin-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo 1 -->
+                            <h3>Elena López</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo 2 -->
+                            <h3>Andrea Pérez</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo -->
+                            <h3>Manuel Aguilar</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 1 -->
+                            <img src="https://halstein.qodeinteractive.com/wp-content/uploads/2021/10/h3-img-6-1024x865.jpg" alt="Imagen 1" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 2 -->
+                            <img src="https://i0.wp.com/lesliefredericks.com/wp-content/uploads/2022/07/take-professional-headshots_position.png?resize=1024%2C1024&ssl=1" alt="Imagen 2" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 3 -->
+                            <img src="https://immunyo.com/wp-content/uploads/2023/05/heinrich.jpg" alt="Imagen 3" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 1 -->
+                            <p class="fs-4 lh-1">Directora</p>
+                            <p class="fs-5 lh-1">s.direccion@elsaber.edu</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 2 -->
+                            <p class="fs-4 lh-1">Asistente Administrativa</p>
+                            <p class="fs-5 lh-1">s.admin@elsaber.edu</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 3 -->
+                            <p class="fs-4 lh-1">Administrador Financiero</p>
+                            <p class="fs-5 lh-1">s.contabilidad@elsaber.edu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección de segunda fila del personal -->
+        <section th:fragment="segundaFila" class="segundaFila" style="margin-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo 1 -->
+                            <h3>Alejandro Solano</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo 2 -->
+                            <h3>Laura Gómez</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo -->
+                            <h3>Juan García</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 1 -->
+                            <img src="https://album.mediaset.es/eimg/10000/2021/03/28/clipping_BhLuat_dea5.jpg?w=1200" alt="Imagen 1" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 2 -->
+                            <img src="https://i0.wp.com/lesliefredericks.com/wp-content/uploads/2022/07/take-professional-headshots_natural-light.png?resize=1024%2C1024&ssl=1" alt="Imagen 2" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 3 -->
+                            <img src="https://assets.website-files.com/61be3810fb2a52498bd1c7eb/61e961adef14a4558c75a9ae_pexels-george-ikwegbu-2379429-2-p-500.jpeg" alt="Imagen 3" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 1 -->
+                            <p class="fs-4 lh-1">Coordinación</p>
+                            <p class="fs-5 lh-1">s.coordinacion@elsaber.edu</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 2 -->
+                            <p class="fs-4 lh-1">Secretaria Académica</p>
+                            <p class="fs-5 lh-1">l.gomez@elsaber.edu</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 3 -->
+                            <p class="fs-4 lh-1">Orientador</p>
+                            <p class="fs-5 lh-1">j.garcia@elsaber.edu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección de tercera fila del personal -->
+        <section th:fragment="terceraFila" class="terceraFila" style="margin-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo 1 -->
+                            <h3>María Rodríguez</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo 2 -->
+                            <h3>Carlos Martínez</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo -->
+                            <h3>Ana Vindas</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 1 -->
+                            <img src="https://abtip.org/wp-content/uploads/2023/02/pexels-august-de-richelieu-4427612-1.png" alt="Imagen 1" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 2 -->
+                            <img src="https://www.comercioandino.cl/wp-content/uploads/2017/08/img.png" alt="Imagen 2" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 3 -->
+                            <img src="https://www.topdoctors.es/files/Image/large/5b879c24-7598-4d15-bcd8-47198ac97da0.jpg" alt="Imagen 3" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 1 -->
+                            <p class="fs-4 lh-1">Profesora de Ciencias</p>
+                            <p class="fs-5 lh-1">m.rodriguez@elsaber.edu</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 2 -->
+                            <p class="fs-4 lh-1">Profesor de Matemáticas</p>
+                            <p class="fs-5 lh-1"> c.martinez@elsaber.edu</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 3 -->
+                            <p class="fs-4 lh-1">Profesora de Inglés</p>
+                            <p class="fs-5 lh-1">a.vindas@elsaber.edu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección de cuarta fila del personal -->
+        <section th:fragment="cuartaFila" class="cuartaFila" style="margin-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo 1 -->
+                            <h3>Johnny Mora</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo 2 -->
+                            <h3>Alejandra Valverde</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Subtítulo -->
+                            <h3>Gabriela Espinoza</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 1 -->
+                            <img src="https://execlauncher.com/wp-content/uploads/2022/04/pexels-laura-tancredi-7083927-scaled-e1650669738371-1024x929.jpg" alt="Imagen 1" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 2 -->
+                            <img src="https://www.gcmujer.com/media/k2/items/cache/245effadf41c6129f4fe7accc564ef86_XL.jpg" alt="Imagen 2" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Imagen 3 -->
+                            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/Knc1ZwzVPnI2IvlrjfPx/media/65b0f816a716b369f7fdd803.jpeg" alt="Imagen 3" class="mx-auto d-block img-fluid" style="width: 100%; height: 350px; object-fit: cover; padding: 20px;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 1 -->
+                            <p class="fs-4 lh-1">Profesor de Estudios Sociales y Cívica</p>
+                            <p class="fs-5 lh-1">j.mora@elsaber.edu</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 2 -->
+                            <p class="fs-4 lh-1">Profesora de Español</p>
+                            <p class="fs-5 lh-1"> a.valverde@elsaber.edu</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center lh-base mt-3 p-1">
+                            <!-- Párrafo 3 -->
+                            <p class="fs-4 lh-1">Profesora de Computación</p>
+                            <p class="fs-5 lh-1">g.espinoza@elsaber.edu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer th:replace="layout/plantilla::footer"></footer>
+    </body>
+</html>
+
+

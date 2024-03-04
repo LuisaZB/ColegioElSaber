@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla::header"></header>
+        <!-- Sección principal para mostrar la informaccion del resumen sobre los servicios -->
+        <section th:fragment="serviciosResumen" id="serviciosResumen" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Servicios</h1>
+                </div>
+                <div class="text-center lh-base mt-3 p-1">
+                    <p class="fs-4">Les invitamos a conocer los servicios que ofrecemos a nuestros estudiantes, siempre nos preocupamos por su bienestar. 
+                        Sin duda contribuyen al bienestar general de los estudiantes al proporcionarles el apoyo necesario para tener éxito en su vida académica y personal.</p>
+                    <!-- Imagen -->
+                    <img src="https://www.careforplanet.eu/img/promobiz.jpg" alt = "Imagen de libreta con lapices, lapiceros y una manzana al lado" height="650" style="display: block; margin: auto; padding: 20px;"/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </section>
+        <!-- Sección principal para mostrar la informaccion orientación y psicología -->
+        <section th:fragment="orientaciónPsicología" id="orientaciónPsicología" style="margin-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-center mt-5 p-1">
+                            <!-- Titulo -->
+                            <h2>Orientación y Psicología</h2>
+                        </div>
+                        <div class="text-start lh-base mt-3 p-1">
+                            <p class="fs-4">Ofrecemos orientación personalizada para ayudar a los estudiantes a tomar decisiones informadas sobre su futuro académico y profesional. 
+                                Además, contamos con servicios de psicología que brindan apoyo emocional y terapia para ayudar a los estudiantes a manejar el estrés y otros desafíos mentales.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Imagen -->
+                        <img src="https://i0.wp.com/mechell.co/wp-content/uploads/2021/12/course-3.jpg?resize=800%2C867&ssl=1" alt="Imagen de psicologa" height="450" style="display: block; margin: auto; padding: 20px;" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección principal para mostrar la informaccion apoyo -->
+        <section th:fragment="apoyo" id="apoyo" style="margin-top: 100px; background-color: #EDFEFF;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Imagen -->
+                        <img src="https://cdn-gnppcjj.nitrocdn.com/PGxcSQJqiEnqXuSzJwyWSnUfytiSLhfm/assets/images/optimized/rev-68986f2/www.magpiewedding.com/wp-content/uploads/2021/04/pexels-andrea-piacquadio-3830752-1.jpg" alt="Imagen de apoyo" height="450" style="display: block; margin: auto; padding: 20px;" />
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-center mt-5 p-1">
+                            <!-- Titulo -->
+                            <h2>Apoyo</h2>
+                        </div>
+                        <div class="text-start lh-base mt-3 p-1">
+                            <p class="fs-4">Nuestro compromiso con el bienestar de los estudiantes se refleja en nuestro amplio abanico de servicios de apoyo, que incluyen asistencia académica, financiera y social. 
+                                Queremos asegurarnos de que todos nuestros estudiantes tengan acceso a los recursos y la ayuda que necesitan para tener éxito.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección principal para mostrar la informaccion biblioteca y ludoteca -->
+        <section th:fragment="bibliotecaLudoteca" id="bibliotecaLudoteca" style="margin-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-center mt-5 p-1">
+                            <!-- Titulo -->
+                            <h2>Biblioteca y Ludoteca</h2>
+                        </div>
+                        <div class="text-start lh-base mt-3 p-1">
+                            <p class="fs-4">Proporcionamos acceso a una amplia gama de recursos educativos, libros, materiales de estudio y actividades recreativas en nuestra biblioteca y ludoteca. 
+                                            Estos espacios están diseñados para fomentar tanto el aprendizaje como el desarrollo personal. Los estudiantes pueden acceder a recursos educativos clave para su estudio, al tiempo que disfrutan de actividades recreativas que promueven un equilibrio saludable entre el trabajo y el ocio.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Imagen -->
+                        <img src="https://www.soycarmin.com/__export/1703206401462/sites/debate/img/2023/12/21/pexels-element-digital-1370296_crop1703206385482.jpg_554688468.jpg" alt="Imagen de biblioteca" height="450" style="display: block; margin: auto; padding: 20px;" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección principal para mostrar la informaccion tutorías grupales -->
+        <section th:fragment="tutoríasGrupales" id="tutoríasGrupales" style="margin-top: 100px; background-color: #EDFEFF;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Imagen -->
+                        <img src="https://www.betterteam.com/images/betterteam-hr-trends-3500x3500-20231221.jpg?crop=21:16,smart&width=420&dpr=2&format=pjpg&auto=webp&quality=85" alt="Imagen de grupo de tutoria" height="450" style="display: block; margin: auto; padding: 20px;" />
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-center mt-5 p-1">
+                            <!-- Titulo -->
+                            <h2>Tutorías grupales</h2>
+                        </div>
+                        <div class="text-start lh-base mt-3 p-1">
+                            <p class="fs-4">Permiten a los estudiantes colaborar, aprender de sus compañeros y recibir apoyo académico en un entorno de aprendizaje colaborativo. 
+                                Estas sesiones son una excelente oportunidad para mejorar la comprensión de los conceptos académicos mientras fomentan la participación activa y el trabajo en equipo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer th:replace="layout/plantilla::footer"></footer>
+    </body>
+</html>
+

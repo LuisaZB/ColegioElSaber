@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head"
+    </head>
+    <body>
+        <header th:replace="layout/plantilla::header"></header>
+        <section th:replace="informacion/personalInformacion :: resumenPersonal"/>
+        <section th:replace="informacion/personalInformacion :: primeraFila"/>
+        <section th:replace="informacion/personalInformacion :: segundaFila"/>
+        <section th:replace="informacion/personalInformacion :: terceraFila"/>
+        <section th:replace="informacion/personalInformacion :: cuartaFila"/>
+        <footer th:replace="layout/plantilla::footer"></footer>
+    </body>
+</html>

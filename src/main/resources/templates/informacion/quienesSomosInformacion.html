@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla::header"></header>
+        <!-- Sección principal para mostrar la informaccion de resumen -->
+        <section th:fragment="resumenQuienesSomos" id="resumenQuienesSomos" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>¿Quiénes Somos?</h1>
+                </div>
+                <div class="text-center lh-base mt-3 p-1">
+                    <p class="fs-4">En Colegio El Saber, nos dedicamos a la formación integral de nuestros estudiantes. Como una institución de educación secundaria, 
+                                    nuestra misión va más allá de impartir conocimientos académicos; nos esforzamos por cultivar valores sólidos y fomentar una ciudadanía activa en cada uno de nuestros alumnos.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Sección de informaccion -->
+        <section th:fragment="primeraInformacion" id="primeraInformacion" style="margin-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text-start lh-base mt-3 p-1">
+                            <p class="fs-4">Nuestro enfoque educativo se fundamenta en tres pilares fundamentales: la pedagogía del amor, la investigación y el trabajo en equipo. Creemos firmemente que el amor por el aprendizaje es el motor que impulsa el crecimiento personal y académico de nuestros estudiantes. 
+                                            A través de la investigación, los alumnos desarrollan habilidades críticas y analíticas, aprendiendo a cuestionar, explorar y descubrir. Además, valoramos profundamente el trabajo en equipo como una habilidad vital para el éxito en la vida.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Imagen -->
+                        <img src="https://www.nosotras.com.mx/wp-content/uploads/2023/10/situaciones-sexistas-1.jpg" alt="Imagen de juego scrabble" height="350" style="display: block; margin: auto; padding: 20px;" />
+                    </div>
+                </div>
+            </div>
+             <!-- Sección de la segunda informaccion -->
+        </section>
+                <section th:fragment="segundaInformacion" id="segundaInformacion" style="background-color: #EDFEFF; margin-top: 100px;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-start lh-base mt-3 p-1">
+                    <p class="fs-4 mb-5">En Colegio El Saber, incentivamos la curiosidad y el descubrimiento. Creemos en proporcionar un entorno educativo estimulante que anime a nuestros estudiantes a explorar diferentes perspectivas y a desarrollar una mentalidad abierta y receptiva hacia el mundo que los rodea.
+                                         Nuestro objetivo final es formar ciudadanos responsables y comprometidos con su comunidad y el mundo en general. Nos esforzamos por dotar a nuestros alumnos con las habilidades, el conocimiento y los valores necesarios para enfrentar los desafíos del siglo XXI y contribuir positivamente a la sociedad.
+                                         En Colegio El Saber, estamos comprometidos con la excelencia académica y la formación integral de nuestros estudiantes. ¡Únete a nosotros en nuestro viaje hacia el conocimiento, el crecimiento y la realización personal!</p>
+                    
+                    <!-- imagen -->
+                    <img src="https://ibwave.org/wp-content/uploads/2022/06/BachilleratoInternacional.png" alt="Imagen del personal" height="350"style="display: block; margin: auto;" />
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </section>
+         <!-- Sección lema principal de la informacion -->
+        <section th:fragment="lema" id="lema">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center lh-base mt-3 p-1">
+                    <p class="fs-4 fst-italic fst-light">Nuestra misión es proporcionar un ambiente de aprendizaje estimulante y seguro donde los estudiantes puedan crecer intelectualmente, emocionalmente y socialmente. 
+                        Nos esforzamos por fomentar la curiosidad, la creatividad, el pensamiento crítico y la responsabilidad en nuestros estudiantes, preparándolos para enfrentar los desafíos del mundo moderno con confianza y compasión.</p>
+                </div>
+            </div>
+        </section>
+        <footer th:replace="layout/plantilla::footer"></footer>
+    </body>
+</html>
+
