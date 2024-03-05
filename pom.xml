@@ -14,7 +14,7 @@
     <name>proyectoElSaber</name>
     <description>Pagina web Colegio el Saber</description>
     <properties>
-        <java.version>20</java.version>
+        <java.version>18</java.version>
     </properties>
     <dependencies>
         <dependency>

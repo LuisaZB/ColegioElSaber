@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla::header"></header>
+        <!-- Sección principal para mostrar la informacion de admisiones -->
+        <section th:fragment="resumenAdmisiones" id="resumenAdmisiones" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Admisiones</h1>
+                </div>
+                <div class="text-center lh-base mt-3 p-1">
+                    <p class="fs-4">Estamos encantados de que estés considerando unirte a nuestra comunidad educativa, para ser 
+                        parte de nuestra comunidad estudiantil, debes completar el proceso de admisión. En el Colegio el 
+                        Saber, nos comprometemos a brindar una educación de calidad que promueva el desarrollo integral 
+                        de cada estudiante.</p>
+                    <!-- Imagen -->
+                    <img src="https://img.remediosdigitales.com/809c5a/pexels-max-fischer-5212700/1366_2000.jpeg" alt = "Imagen de utilez escolares y niño" height="650" style="display: block; margin: auto; padding: 20px;"/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </section>
+        <!-- Sección para mostrar las distintas fases -->
+        <section th:fragment="fases" id="fases" style="margin-top: 100px;">
+            <br></br>
+            <h2 class="text-center">I Fase - Inscripción (Entrega de documentos)</h2>
+            <br></br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <!-- Imagen -->
+                        <img src="https://fortytwo.nl/psozikux/2017/06/icons_42_number_1.svg" alt="simbolo 1" height="200" style="display: block; margin: auto ; padding: 5px;" />
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-start lh-base mt-3 p-1">
+                            <!-- Texto -->
+                            <p class="fs-5" >Para iniciar el proceso de admisión, les agradecemos completar el formulario de aplicación que se realiza con la compra de un sobre directamente en la institución. En dicho sobre, se deben adjuntar los documentos requeridos según la lista de requisitos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br></br>
+            <p class="text-center">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+            <h2 class="text-center">II Fase - Examen de admisión</h2>
+            <br></br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <!-- Imagen -->
+                        <img src="https://fortytwo.nl/psozikux/2017/06/icons_42_number_2.svg" alt="simbolo 2" height="200" style="display: block; margin: auto ; padding: 5px;" />
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-start lh-base mt-3 p-1">
+                            <!-- Texto -->
+                            <p class="fs-5" >Completada su solicitud, el equipo de admisiones se pondrá en contacto con usted para coordinar las evaluaciones. Éstas se realizan con el objetivo de reconocer las habilidades y capacidades de aprendizaje. 
+                                El alumno debe realizar tres pruebas: Matemáticas, Inglés y Español para evaluar el desempeño del estudiante considerando los estándares del nivel de grado de aplicación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+            <h2 class="text-center">III Fase - Resultados del examen de admisión</h2>
+            <br></br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <!-- Imagen -->
+                        <img src="https://fortytwo.nl/psozikux/2017/06/icons_42_number_3.svg" alt="simbolo 3" height="200" style="display: block; margin: auto ; padding: 5px;" />
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-start lh-base mt-3 p-1">
+                            <!-- Texto -->
+                            <p class="fs-5" >Una vez realizadas las evaluaciones y teniendo en cuenta qué es lo mejor para el alumno, nuestro equipo de admisiones se pondrá en contacto con usted por medio de correo electrónico para comunicarle los resultados de las admisiones (Admitodo o no admitido).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+            <h2 class="text-center">IV Fase - Entrevista al estudiante y su familia</h2>
+            <br></br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <!-- Imagen -->
+                        <img src="https://fortytwo.nl/psozikux/2017/06/icons_42_number_4.svg" alt="simbolo 3" height="200" style="display: block; margin: auto ; padding: 5px;" />
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-start lh-base mt-3 p-1">
+                            <!-- Texto -->
+                            <p class="fs-5" >Consiste en la entrevista al estudiante y su familia, se busca conocer al estudiante en profundidad, evaluar sus motivaciones y expectativas, establecer una relación con la familia, obtener información sobre su contexto familiar y responder a cualquier pregunta o duda que puedan surgir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+            <h2 class="text-center">V Fase - Matrícula</h2>
+            <br></br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <!-- Imagen -->
+                        <img src="https://fortytwo.nl/psozikux/2017/06/icons_42_number_5.svg" alt="simbolo 3" height="200" style="display: block; margin: auto ; padding: 5px;" />
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-start lh-base mt-3 p-1">
+                            <!-- Texto -->
+                            <p class="fs-5" >Después de recibir una oferta, los padres/tutores deberán de hacer la inscripción para asegurar la plaza del estudiante. Es un proceso fundamental que formaliza la inscripción de un estudiante en el colegio y requiere la presentación de documentación, el pago de tarifas y la firma de contratos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+        </section>
+
+</html>
