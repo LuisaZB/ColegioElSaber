@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla::header"></header>
+        <!-- Sección principal para mostrar el formulario de inicio de sesión -->
+        <section th:fragment="resumenLogin" id="resumenLogin" style="background-color: #EDFEFF;">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <!-- Contenido adicional aquí -->
+                    </div>
+                </div>
+                <div class="text-left mt-3 p-1">
+                    <section th:fragment="InicioSesion" id="InicioSesion" style="margin-top: 90px;"></section>
+                    <!-- Formulario de inicio de sesión -->
+                    <h1>Iniciar sesión</h1>
+                    <br></br>
+                </div>
+                <div style="float: left;">
+                        <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="direccionCorreo" placeholder="Correo electronico">
+                   
+                    
+                        <label for="passwordUsername" class="form-label">Password</label>
+                        <input type="text" class="form-control" id="contraseña" placeholder="Contraseña">
+                             </div>
+                 </div>
+                    <!-- Botón -->
+                    
+                <div>
+                    <a class="btn text-light fs-5 mb-3 mt-3 rounded-0" th:href="@{/quienesSomos}" role="button" style="background-color: #0CBBC7;">
+                        Iniciar Sesión
+                    </a>
+                </div>
+                <div style="float: right;margin-top: -250px;">
+                    <img src="https://colegiolourdes.es/wp-content/uploads/2021/09/Slide-Residencia-500.jpg" alt="Imagen de estudiantes" height="350">
+                </div>
+            </div>
+            <br></br>
+        </section>
+
+    </body>
