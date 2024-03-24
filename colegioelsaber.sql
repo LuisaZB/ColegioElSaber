@@ -87,3 +87,16 @@ CREATE TABLE calificaciones (
     FOREIGN KEY (id_asignatura) REFERENCES asignaturas(id_asignatura)
 ) ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
+-- tabla para mensajes
+CREATE TABLE mensajes (
+    id_mensaje INT NOT NULL AUTO_INCREMENT,
+    contenido TEXT NOT NULL,
+    fecha_envio TIMESTAMP NOT NULL,
+    remitente_id INT NOT NULL,
+    destinatario_id INT NOT NULL,
+    PRIMARY KEY (id_mensaje),
+    FOREIGN KEY (remitente_id) REFERENCES estudiantes(id_estudiante),
+    FOREIGN KEY (destinatario_id) REFERENCES estudiantes(id_estudiante)
+) ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
