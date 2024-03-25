@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head"></head>
+    <body>
+        <header th:replace="layout/plantilla::header"></header>
+        <!-- Sección principal para mostrar el formulario de inicio de sesión -->
+        <section th:fragment="primeraFila" id="primeraFila" style="background-color: #EDFEFF;">
+            <div class="text-center mt-3 p-1">
+                <!-- Titulo -->
+                <h1>Crear cuenta</h1>
+            </div>
+            <div class="text-left lh-base mt-3 p-1">
+                <p class="fs-4">Rol de Administrador</p>
+                <form>
+
+                    <table>
+                        <!-- Celdas -->
+                        <tr>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Seccion" placeholder="Sección"></td>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Subir foto" placeholder="Subir foto"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Nombre completo" placeholder="Nombre completo"></td>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="No.Carnet" placeholder="No. Carnet"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="No. de identificacion" placeholder="No. de identificación"></td>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Fecha Nacimiento" placeholder="Fecha Nacimiento"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Pais origen" placeholder="País origen"></td>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Correo institucional" placeholder="Correo institucional"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Materia impartida" placeholder="Materia impartida"></td>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Correo personal" placeholder="Correo personal"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control mb-3" style="width: 800px;" name="Titulo academico" placeholder="Titulo academico"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control mb-3" style="width: 800px;" name="Direccion" placeholder="Direccion"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Canton" placeholder="Canton"></td>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Provincia" placeholder="Provincia"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Telefono habitacion" placeholder="Telefono habitacion"></td>
+                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Telefono adicional" placeholder="Telefono adicional"></td>
+                        </tr>
+                    </table>
+
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Recuerdame</label>
+                    </div>
+                    <!-- Botón -->
+                    <div class="mt-20">
+                        <button class="btn text-light fs-5 mb-3 mt-3 rounded-0" style="background-color: #0CBBC7;">
+                            Guardar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
