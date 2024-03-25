@@ -14,24 +14,75 @@ FLUSH PRIVILEGES;
 -- Tabla para estudiantes
 CREATE TABLE estudiantes (
     id_estudiante INT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(100) NOT NULL,
-    apellido VARCHAR(100) NOT NULL,
-    fecha_nacimiento DATE,
-    direccion VARCHAR(255),
-    telefono VARCHAR(15),
-    PRIMARY KEY (id_estudiante)
+	seccion VARCHAR (10),
+    Subir_foto VARCHAR(100) NOT NULL,
+    nombre_completo VARCHAR(100) NOT NULL,
+    no_de_carnet DATE,
+    no_de_identificacion  VARCHAR(255),
+    fecha_de_nacimiento VARCHAR(15),
+    pais_de_origen VARCHAR(15),
+    correo_institucional VARCHAR(25),
+    direccion VARCHAR(30),
+    canton VARCHAR(15),
+    provincia VARCHAR(15),
+    telefono_habitacion VARCHAR(20),
+	telefono_adicional VARCHAR(20),
+    correo_personal VARCHAR(25),
+    titulo_academico VARCHAR(25),
+    nombre_completo_encargado VARCHAR(100) NOT NULL,
+	no_de_identificacion_encargado  VARCHAR(255),
+    telefono_movil_encargado VARCHAR(20),
+	correo_electronico_encargado VARCHAR(25),
+    trabaja_actualmente_encargado VARCHAR(25),
+    lugar_de_trabajo_encargado VARCHAR(25),
+    telefono_trabajo_encargado VARCHAR(25),
+	agregar_otro_encargado VARCHAR(15),
+PRIMARY KEY (id_estudiante)
 ) ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
+
+-- Tabla para administradores
+CREATE TABLE administrador (
+    id_administrador INT NOT NULL AUTO_INCREMENT,
+    Subir_foto VARCHAR(100) NOT NULL,
+    nombre_completo VARCHAR(100) NOT NULL,
+    no_de_carnet DATE,
+    no_de_identificacion  VARCHAR(255),
+    fecha_de_nacimiento VARCHAR(15),
+    pais_de_origen VARCHAR(15),
+    correo_institucional VARCHAR(25),
+    area VARCHAR(25),
+    correo_personal VARCHAR(25),
+    titulo_academico VARCHAR(25),
+    direccion VARCHAR(30),
+    canton VARCHAR(15),
+    provincia VARCHAR(15),
+    telefono_habitacion VARCHAR(20),
+    telefono_adicional VARCHAR(20),
+    PRIMARY KEY (id_administrador)
+) ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
 
 -- Tabla para profesores
 CREATE TABLE profesores (
     id_profesor INT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(100) NOT NULL,
-    apellido VARCHAR(100) NOT NULL,
-    fecha_nacimiento DATE,
-    direccion VARCHAR(255),
-    telefono VARCHAR(15),
-    especialidad VARCHAR(100),
+    seccion VARCHAR (10),
+    Subir_foto VARCHAR(100) NOT NULL,
+    nombre_completo VARCHAR(100) NOT NULL,
+    no_de_carnet DATE,
+    no_de_identificacion  VARCHAR(255),
+    fecha_de_nacimiento VARCHAR(15),
+    pais_de_origen VARCHAR(15),
+    correo_institucional VARCHAR(25),
+    materia_impartida VARCHAR(25),
+    correo_personal VARCHAR(25),
+    titulo_academico VARCHAR(25),
+    direccion VARCHAR(30),
+    canton VARCHAR(15),
+    provincia VARCHAR(15),
+    telefono_habitacion VARCHAR(20),
+    telefono_adicional VARCHAR(20),
     PRIMARY KEY (id_profesor)
 ) ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
@@ -99,4 +150,3 @@ CREATE TABLE mensajes (
     FOREIGN KEY (destinatario_id) REFERENCES estudiantes(id_estudiante)
 ) ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
-
