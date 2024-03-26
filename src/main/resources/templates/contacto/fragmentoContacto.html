@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla::header"></header>
+        <!-- Sección principal para mostrar form de contacto-->
+        <section th:fragment="formContacto" id="formContacto" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Comunicate con nosotros</h1>
+                </div>
+                <br></br>
+                <form th:action="@{/contacto}" th:object="${contacto}"
+                      method="POST" class="was-validated" enctype="multipart/form-data" >
+                    <div th:if="${mensajeConfirmacion}" class="alert alert-success" role="alert">
+                        <p th:text="${mensajeConfirmacion}"></p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="nombre">[[#{contacto.nombre}]]</label>
+                                <input type="text" class="form-control" name="nombre" required="true"/>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="apellido">[[#{contacto.apellido}]]</label>
+                                <input type="text" class="form-control" name="apellido" required="true"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="correo">[[#{contacto.correo}]]</label>
+                                <input type="text" class="form-control" name="correo" required="true" placeholder="nombre@example.com"/>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="telefono">[[#{contacto.telefono}]]</label>
+                                <input type="text" class="form-control" name="telefono" required="true" placeholder="+(506) 8888-8888"/>
+                            </div>   
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje">[[#{contacto.mensaje}]]</label>
+                            <input type="text" class="form-control" name="mensaje" required="true"/>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="mb-3 btn text-light fs-5 mb-3 mt-3 rounded-0" type="submit" style="background-color: #0CBBC7;">Enviar</button>
+                    </div>
+                </form>
+                <br></br>
+        </section>
+        <!-- Sección para mostrar la infirmacion -->
+        <section th:fragment="informacion" id="informacion" style="margin-top: 100px;">
+            <br></br>
+
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="text-start lh-base mt-3 p-1">
+                            <!-- Texto -->
+                            <h2>Ven a visitarnos</h2>
+                            <p class="fs-5" >Nos encanta recibirte, así que en cualquier momento durante las horas de oficina,  es una valiosa oportunidad para que los futuros estudiantes y sus familias conozcan nuestro colegio y los distintos programas que ofrecemos
+                                San José, Costa Rica. 200 metros norte de la Iglesia Católica</p>
+                            <h2>Télefono</h2>
+                            <p class="fs-5" >4000-2022</p>
+                            <h2>Horario</h2>
+                            <p class="fs-5" >Lunes a viernes: 7am - 3:30pm</p>
+                            <p class="fs-5" >Sábado y domingo: Cerrado</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <!-- mapa -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15729.335644610292!2d-83.996315!3d9.7377568!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa119401cc13c07%3A0x9025a842cfb4ac15!2sCTP%20Jos%C3%A9%20Figueres%20Ferrer!5e0!3m2!1ses-419!2scr!4v1709678484391!5m2!1ses-419!2scr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br></br>
+
+        </section>
+
+</html>
