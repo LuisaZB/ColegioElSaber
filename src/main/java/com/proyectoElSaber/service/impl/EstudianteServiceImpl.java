@@ -30,11 +30,11 @@ public class EstudianteServiceImpl implements EstudianteService {
         return lista;
     }
 
-    @Override
-    @Transactional(readOnly = true)
-    public Estudiante getEstudiantes(Estudiante estudiante) {
-        return estudianteDao.findByIdEstudiante(estudiante.getIdEstudiante()).orElse(null);
-    }
+//    @Override
+//    @Transactional(readOnly = true)
+//    public Estudiante getEstudiantes(Estudiante estudiante) {
+//        return estudianteDao.findByIdEstudiante(estudiante.getIdEstudiante()).orElse(null);
+//    }
 
     @Override
     public void save(Estudiante estudiante) {
@@ -47,8 +47,8 @@ public class EstudianteServiceImpl implements EstudianteService {
     }
 
     @Override
-    public List<Estudiante> buscarPorEstudiante(String noDeIdentificacion) {
-        return estudianteDao.findByIdEstudiante(noDeIdentificacion);
+    public List<Estudiante> buscarPorEstudiante(Long idDeEstudiante) {
+        return estudianteDao.findByIdEstudiante(idDeEstudiante);
     }
     
     

@@ -7,5 +7,5 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EstudianteDao extends JpaRepository<Estudiante, Long> {
-    List<Estudiante> findByIdEstudiante(int idEstudiante);
+    List<Estudiante> findByIdEstudiante(Long idEstudiante);
 }

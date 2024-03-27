@@ -29,11 +29,11 @@ public class AdministradorSeviceImpl implements AdministradorService {
         return lista;
     }
 
-    @Override
-    @Transactional(readOnly = true)
-    public Administrador getAdministrador(Administrador administrador) {
-        return administradorDao.findByNoDeCarnet(administrador.noDeCarnet).orElse(null);
-    }
+//    @Override
+//    @Transactional(readOnly = true)
+//    public Administrador getAdministrador(Administrador administrador) {
+//        return administradorDao.findByNoDeCarnet(administrador.getNoDeCarnet()).orElse(null);
+//    }
 
     @Override
     public void save(Administrador administrador) {
