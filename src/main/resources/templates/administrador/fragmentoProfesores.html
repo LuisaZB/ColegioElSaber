@@ -3,6 +3,21 @@
     <head th:replace="layout/plantilla::head"></head>
     <body>
         <header th:replace="layout/plantilla::header"></header>
+
+        <!-- Sección principal para mostrar rl titulo -->
+        <section th:fragment="tituloProfesores" id="tituloProfesores" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Crear cuenta</h1>
+                </div>
+            </div>
+        </section>
+        
         <!-- Sección principal para mostrar el formulario de inicio de sesión -->
         <section th:fragment="primeraFila" id="primeraFila" style="background-color: #EDFEFF;">
             <div class="text-center mt-3 p-1">
@@ -62,6 +77,37 @@
                     </div>
                 </form>
             </div>
+        </section>
+        
+                <!-- Sección principal para mostrar form de profesor-->
+        <section th:fragment="formProfesor" id="formProfesor" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <br></br>
+                <form th:action="@{/registroProfesores}" th:object="${profesores}"
+                      method="POST" class="was-validated" enctype="multipart/form-data" >
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="sección">Sección</label>
+                                <input type="text" class="form-control" name="sección"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="nombreCompleto">Nombre completo</label>
+                                <input type="text" class="form-control" name="nombreCompleto" required="true">
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="NoCarnet">No. de Carnet</label>
+                                <input type="text" class="form-control" name="NoCarnet" required="true"/>
+                            </div>   
+                        </div>
+                    </div>
+                    <div>
+                        <button class="mb-3 btn text-light fs-5 mb-3 mt-3 rounded-0" type="submit" style="background-color: #0CBBC7;">Guardar</button>
+                    </div>
+                </form>
+                <br></br>
         </section>
     </body>
 </html>

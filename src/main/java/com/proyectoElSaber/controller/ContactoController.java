@@ -21,14 +21,14 @@ public class ContactoController {
         @RequestMapping("/contacto")
     public String page(Model model) {
         model.addAttribute("attribute", "value");
-        return "contacto";
+        return "/contacto/contacto";
     }
     
     @PostMapping("/contacto")
     public String guardarContacto(@ModelAttribute Contacto contacto, Model model) {
         model.addAttribute("mensajeConfirmacion", "Su formulario ha sido enviado correctamente. Nos pondremos en contacto con usted lo antes posible.");
         contactoService.save(contacto);
-        return "contacto";
+        return "/contacto/contacto";
       
     
 }

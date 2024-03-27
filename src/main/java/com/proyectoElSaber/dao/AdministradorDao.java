@@ -5,9 +5,8 @@
 package com.proyectoElSaber.dao;
 
 import com.proyectoElSaber.domain.Administrador;
-import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AdministradorDao extends JpaRepository<Administrador, Long> {
-    List<Administrador> findByNoDeCarnet(String noDeCarnet);
+    Administrador findByNoDeCarnet(String noDeCarnet);
 }

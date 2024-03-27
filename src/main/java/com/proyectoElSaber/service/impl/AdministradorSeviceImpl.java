@@ -29,11 +29,10 @@ public class AdministradorSeviceImpl implements AdministradorService {
         return lista;
     }
 
-//    @Override
-//    @Transactional(readOnly = true)
-//    public Administrador getAdministrador(Administrador administrador) {
-//        return administradorDao.findByNoDeCarnet(administrador.getNoDeCarnet()).orElse(null);
-//    }
+    @Transactional(readOnly = true)
+    public Administrador getAdministrador(Administrador administrador) {
+        return administradorDao.findByNoDeCarnet(administrador.getNoDeCarnet());
+    }
 
     @Override
     public void save(Administrador administrador) {
@@ -47,7 +46,7 @@ public class AdministradorSeviceImpl implements AdministradorService {
 
     @Override
     public List<Administrador> buscarPorAdministrador(String noDeCarnet) {
-        return administradorDao.findByNoDeCarnet(noDeCarnet);
+        return (List<Administrador>) administradorDao.findByNoDeCarnet(noDeCarnet);
     }
     
     
