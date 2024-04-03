@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantillaEstudiantes::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantillaEstudiantes::header"></header>
+
+        <section th:fragment="descripcionNotas" id="descripcionNotas" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9"></div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Notas</h1>
+
+                    <!-- Texto -->
+                    <p class="fs-5" >A continuación encontrará la lista de las notas del presente año.  Por favor verificar que la calificación sean las correctas , y si ve algún error, por favor notifíquelo inmediatamente al profesor. De lo contrario, podría tener problemas al momento de recibir su calificación trimestral y no se aceptan apelaciones despues de 7 días.</p>
+                </div>
+            </div>
+        </section>
+</html>
