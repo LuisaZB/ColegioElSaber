@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Personal
  */
 @Controller
-public class EstudianteController {
+public class NotasController {
     
     @RequestMapping("/notas")
     public String page(Model model) {

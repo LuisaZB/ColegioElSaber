@@ -1,0 +1,250 @@
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantillaEstudiantes::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantillaEstudiantes::header"></header>
+
+        <section th:fragment="descripcionNotas" id="descripcionNotas" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9"></div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Notas</h1>
+
+                    <!-- Texto -->
+                    <p class="fs-5" >A continuación encontrará la lista de las notas del presente año.  Por favor verificar que la calificación sean las correctas , y si ve algún error, por favor notifíquelo inmediatamente al profesor. De lo contrario, podría tener problemas al momento de recibir su calificación trimestral y no se aceptan apelaciones despues de 7 días.</p>
+                </div>
+            </div>
+        </section>
+        <section th:fragment="tablaNotas" id="tablaNotas">
+            <div class="container">
+                <div class="row">
+                    <div class="center">
+                        <div class="card">
+                            <div class="card-header">
+                            </div>
+                            <div>
+                                <table class="table table-striped table-hover">
+                                    <thead class="table-dark">
+                                        <tr><th></th>
+
+                                            <th>[[#{notas.codigo}]]</th>
+                                            <th>[[#{notas.materia}]]</th>
+                                            <th>[[#{notas.profesor}]]</th>
+                                            <th>[[#{notas.proyecto}]]</th>
+                                            <th>[[#{notas.final}]]</th>
+                                            <th>[[#{notas.estado}]]</th>
+                                            <th></th></tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section th:fragment="datosDescripcion" id="datosDescripcion" >
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9"></div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Mis Datos Personales</h1>
+
+                    <!-- Texto -->
+                    <p class="fs-5" >Si encuentra algún error en su información personal, por favor contactar al Departamento de Registro </p>
+                    <p class="fs-5" >para actualizar sus datos</p>
+                </div>
+            </div>
+        </section>
+        <section th:fragment="datosEstudiante" id="datosEstudiante" style="background-color: #EDFEFF;">
+            <div class="container">
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h3>Datos del Estudiante</h3>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Nombre Completo: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>No. de Carnet: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>No. de Identificación: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Fecha de Nacimiento: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>País de Orígen: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Correo Institucional: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h3>Dirección de Residencia</h3>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Dirección: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Teléfono Habitación: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Provincia: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Cantón: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h3>Datos del Encargado</h3>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Nombre Completo: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>No. de Identificación: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Teléfono Movil: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Correo Electrónico: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Trabaja Actualmente: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Lugar de Trabajo: </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="center">
+                        <div class="col-md-9">
+                            <h5>Teléfono Trabajo: </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section th:fragment="horarioDescripcion" id="horarioDescripcion" style="background-color: #EDFEFF;" >
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-9"></div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Horario</h1>
+
+
+                    <p class="fs-5" >Si este no corresponde a su horario, por favor contactar al Departamento de Registro </p>
+                </div>
+            </div>
+        </section>
+        <section th:fragment="tablaHorario" id="tablaHorario">
+            <div class="container">
+                <div class="row">
+                    <div class="center">
+                        <img src="https://thumbs.dreamstime.com/z/students-interacting-each-other-making-friends-university-college-campus-tours-university-campus-events-campus-students-277601099.jpg?w=992" alt = "Imagen de niños yendo a la escuela" height="400" style="display: block; margin: auto; padding: 20px;"/>
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-header">
+                                </div>
+                                <div>
+                                    <table class="table table-striped table-hover">
+                                        <thead class="table-dark">
+                                            <tr><th></th>
+
+                                                <th>[[#{horario.seccion}]]</th>
+                                                <th>[[#{horario.lunes}]]</th>
+                                                <th>[[#{horario.martes}]]</th>
+                                                <th>[[#{horario.miercoles}]]</th>
+                                                <th>[[#{horario.jueves}]]</th>
+                                                <th>[[#{horario.viernes}]]</th>
+
+                                                <th></th></tr>
+                                        </thead>
+                                        <tbody>
+                                            
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
