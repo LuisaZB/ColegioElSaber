@@ -24,7 +24,17 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <ul class="navbar-nav">
-                            <li class="nav-item px-2"><a class="nav-link" th:href="@{/crear/cuenta}">[[#{plantillaAdmin.crear}]]</a></li>
+                            <ul class="navbar-nav">
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">[[#{plantillaAdmin.crear}]]</a>
+                                <ul class="dropdown-menu dropdown-menu-white">
+                                    <li><a class="dropdown-item"  th:href="@{/registroEstudiantes}">[[#{plantillaAdmin.registroEstudiantes}]]</a></li>
+                                    <li><a class="dropdown-item"  th:href="@{/registroProfesores}">[[#{plantillaAdmin.registroProfesores}]]</a></li>
+                                    <li><a class="dropdown-item"  th:href="@{/registroAdministradores}">[[#{plantillaAdmin.registroAdministradores}]]</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>   
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/datos}">[[#{plantillaAdmin.datos}]]</a></li>
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/administrar}">[[#{plantillaAdmin.administrar}]]</a></li>
                         </ul>                     
@@ -32,6 +42,19 @@
                 </div>
             </nav>
         </header>
+          <!-- Sección para mostrar el titulo -->
+        <section th:fragment="tituloCrear" id="tituloCrear" style="background-color: #EDFEFF;">
+            <div class="container p-1" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Crear cuenta</h1>
+                </div>
+            </div>
+        </section>
         <footer th:fragment="footer" class="bg-dark text-white mt-5 p-2">
             <div class="container">
                 <div class="col">

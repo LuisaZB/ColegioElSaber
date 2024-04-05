@@ -18,15 +18,14 @@ private static final long serialVersionUID = 1L;
     private String subirFoto;  
     private String nombreCompleto;  
     private String noDeIdentificacion;  
-    private String fechaDeNacimeinto;  
+    private String fechaDeNacimiento;  
     private String paisDeOrigen;  
     private String correoInstitucional;  
     private String direccion;  
     private String canton;  
     private String provincia;  
     private String telefonoHabitacion;  
-    private String telefonoAdicional;  
-    private String correoPersonal;  
+    private String telefonoAdicional;
     
     private String nombreCompletoEncargado;  
     private String noDeIdentificacionEncargado;  
@@ -47,12 +46,12 @@ private static final long serialVersionUID = 1L;
     public Estudiante() {
     }
 
-    public Estudiante(String seccion, String subirFoto, String nombreCompleto, String noDeIdentificacion, String fechaDeNacimeinto, String paisDeOrigen, String correoInstitucional, String direccion, String canton, String provincia, String telefonoHabitacion, String telefonoAdicional, String correoPersonal, String nombreCompletoEncargado, String noDeIdentificacionEncargado, String telefonoMovilEncargado, String correoElectronicoEncargado, boolean trabajaActualmenteEncargado, String lugarDeTrabajoEncargado, String telefonoTrabajoEncargado, String nombreCompletoEncargado2, String noDeIdentificacionEncargado2, String telefonoMovilEncargado2, String correoElectronicoEncargado2, boolean trabajaActualmenteEncargado2, String lugarDeTrabajoEncargado2, String telefonoTrabajoEncargado2) {
+    public Estudiante(String seccion, String subirFoto, String nombreCompleto, String noDeIdentificacion, String fechaDeNacimiento, String paisDeOrigen, String correoInstitucional, String direccion, String canton, String provincia, String telefonoHabitacion, String telefonoAdicional, String nombreCompletoEncargado, String noDeIdentificacionEncargado, String telefonoMovilEncargado, String correoElectronicoEncargado, boolean trabajaActualmenteEncargado, String lugarDeTrabajoEncargado, String telefonoTrabajoEncargado, String nombreCompletoEncargado2, String noDeIdentificacionEncargado2, String telefonoMovilEncargado2, String correoElectronicoEncargado2, boolean trabajaActualmenteEncargado2, String lugarDeTrabajoEncargado2, String telefonoTrabajoEncargado2) {
         this.seccion = seccion;
         this.subirFoto = subirFoto;
         this.nombreCompleto = nombreCompleto;
         this.noDeIdentificacion = noDeIdentificacion;
-        this.fechaDeNacimeinto = fechaDeNacimeinto;
+        this.fechaDeNacimiento = fechaDeNacimiento;
         this.paisDeOrigen = paisDeOrigen;
         this.correoInstitucional = correoInstitucional;
         this.direccion = direccion;
@@ -60,7 +59,6 @@ private static final long serialVersionUID = 1L;
         this.provincia = provincia;
         this.telefonoHabitacion = telefonoHabitacion;
         this.telefonoAdicional = telefonoAdicional;
-        this.correoPersonal = correoPersonal;
         this.nombreCompletoEncargado = nombreCompletoEncargado;
         this.noDeIdentificacionEncargado = noDeIdentificacionEncargado;
         this.telefonoMovilEncargado = telefonoMovilEncargado;
