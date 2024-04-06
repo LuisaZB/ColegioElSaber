@@ -2,66 +2,101 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head th:replace="layout/plantilla::head"></head>
     <body>
-        <header th:replace="layout/plantilla::header"></header>
-        <!-- Sección principal para mostrar el formulario de inicio de sesión -->
-        <section th:fragment="primeraFila" id="primeraFila" style="background-color: #EDFEFF;">
-            <div class="text-center mt-3 p-1">
-                <!-- Titulo -->
-                <h1>Crear cuenta</h1>
-            </div>
-            <div class="text-left lh-base mt-3 p-1">
-                <p class="fs-4">Rol de Administrador</p>
-                <form>
-
-                    <table>
-                        <!-- Celdas -->
-                        <tr>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Seccion" placeholder="Sección"></td>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Subir foto" placeholder="Subir foto"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Nombre completo" placeholder="Nombre completo"></td>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="No.Carnet" placeholder="No. Carnet"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="No. de identificacion" placeholder="No. de identificación"></td>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Fecha Nacimiento" placeholder="Fecha Nacimiento"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Pais origen" placeholder="País origen"></td>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Correo institucional" placeholder="Correo institucional"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Materia impartida" placeholder="Materia impartida"></td>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Correo personal" placeholder="Correo personal"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="form-control mb-3" style="width: 800px;" name="Titulo academico" placeholder="Titulo academico"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="form-control mb-3" style="width: 800px;" name="Direccion" placeholder="Direccion"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Canton" placeholder="Canton"></td>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Provincia" placeholder="Provincia"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Telefono habitacion" placeholder="Telefono habitacion"></td>
-                            <td><input type="text" class="form-control mb-3" style="width: 400px;" name="Telefono adicional" placeholder="Telefono adicional"></td>
-                        </tr>
-                    </table>
-
-                    <div class="checkbox">
-                        <label><input type="checkbox"> Recuerdame</label>
+        <header th:replace="layout/plantillaAdministradores::header"></header>
+        <!-- Sección principal para mostrar form de contacto-->
+        <section th:fragment="registroAdministradores" id="registroAdministradores">
+            <div class="container p-2" >
+                <form th:action="@{/administrador}" th:object="${administrador}"
+                      method="POST" class="was-validated" enctype="multipart/form-data" >
+                    <div th:if="${mensajeConfirmacion}" class="alert alert-success" role="alert">
+                        <p th:text="${mensajeConfirmacion}"></p>
                     </div>
-                    <!-- Botón -->
-                    <div class="mt-20">
-                        <button class="btn text-light fs-5 mb-3 mt-3 rounded-0" style="background-color: #0CBBC7;">
-                            Guardar
-                        </button>
+                    <div class="modal-body p-1">
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <h5>Rol Administrador</h5>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="subirFoto">[[#{crea.imagen}]]</label>
+                                <input class="form-control" type="file" name="subirFoto" onchange="readURL(this);"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="nombreCompleto">[[#{crea.nombre}]]</label>
+                                <input type="text" class="form-control" name="nombreCompleto" required="true"/>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="noDecarnet">[[#{crea.carnet}]]</label>
+                                <input type="text" class="form-control" name="noDecarnet" required="true"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="noDeIdentificacion">[[#{crea.identificacion}]]</label>
+                                <input type="text" class="form-control" name="noDeIdentificacion" required="true"/>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="fechaDeNacimiento">[[#{crea.nacimiento}]]</label>
+                                <input type="text" class="form-control" name="fechaDeNacimiento" required="true" placeholder="dd-mm-aa"/>
+                            </div>   
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="paisDeOrigen">[[#{crea.pais}]]</label>
+                                <input type="text" class="form-control" name="paisDeOrigen"/>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="correoInstitucional">[[#{crea.institucional}]]</label>
+                                <input type="text" class="form-control" name="correoInstitucional" required="true" placeholder="@elsaber.edu"/>
+                            </div>   
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="area">[[#{crea.area}]]</label>
+                                <input type="text" class="form-control" name="area"/>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="correoPersonal">[[#{crea.personal}]]</label>
+                                <input type="text" class="form-control" name="correoPersonal" required="true" placeholder="@elsaber.edu"/>
+                            </div>   
+                        </div>
+                        <div class="mb-3">
+                            <label for="tituloAcademico">[[#{crea.titulo}]]</label>
+                            <input type="text" class="form-control" name="tituloAcademico" required="true"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccion">[[#{crea.direccion}]]</label>
+                            <input type="text" class="form-control" name="direccion" required="true"/>
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="canton">[[#{crea.canton}]]</label>
+                                <input type="text" class="form-control" name="canton"/>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="provincia">[[#{crea.provincia}]]</label>
+                                <input type="text" class="form-control" name="provincia"/>
+                            </div>   
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="telefonoHabitacion">[[#{crea.telefonoHabitacion}]]</label>
+                                <input type="text" class="form-control" name="telefonoHabitacion" required="true" placeholder="8888-8888"/>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="telefonoAdicional">[[#{crea.telefonoAdicional}]]</label>
+                                <input type="text" class="form-control" name="telefonoAdicional" placeholder="8888-8888" />
+                            </div>
+                        </div>
                     </div>
-                </form>
             </div>
+            <div class="d-flex justify-content-center">
+                <button class="mb-3 btn btn-lg text-light fs-5 mb-3 mt-3 rounded-0" type="submit" style="background-color: #0CBBC7;">Guardar</button>
+            </div>
+            </form>
+            </div>
+            <br></br>
         </section>
     </body>
 </html>

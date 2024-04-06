@@ -27,7 +27,7 @@ private static final long serialVersionUID = 1L;
     private String subirFoto;  
     private String nombreCompleto;  
     private String noDeIdentificacion;  
-    private String fechaDeNacimeinto;  
+    private String fechaDeNacimiento;  
     private String paisDeOrigen;  
     private String correoInstitucional;  
     private String area;  
@@ -42,12 +42,12 @@ private static final long serialVersionUID = 1L;
     public Administrador() {
     }
 
-    public Administrador(String noDeCarnet, String subirFoto, String nombreCompleto, String noDeIdentificacion, String fechaDeNacimeinto, String paisDeOrigen, String correoInstitucional, String area, String correoPersonal, String tituloAcademico, String direccion, String canton, String provincia, String telefonoHabitacion, String telefonoAdicional) {
+    public Administrador(String noDeCarnet, String subirFoto, String nombreCompleto, String noDeIdentificacion, String fechaDeNacimiento, String paisDeOrigen, String correoInstitucional, String area, String correoPersonal, String tituloAcademico, String direccion, String canton, String provincia, String telefonoHabitacion, String telefonoAdicional) {
         this.noDeCarnet = noDeCarnet;
         this.subirFoto = subirFoto;
         this.nombreCompleto = nombreCompleto;
         this.noDeIdentificacion = noDeIdentificacion;
-        this.fechaDeNacimeinto = fechaDeNacimeinto;
+        this.fechaDeNacimiento = fechaDeNacimiento;
         this.paisDeOrigen = paisDeOrigen;
         this.correoInstitucional = correoInstitucional;
         this.area = area;

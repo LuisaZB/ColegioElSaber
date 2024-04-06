@@ -6,9 +6,8 @@
 </head>
 <body>
     <header th:replace="layout/plantillaAdministradores::header"></header>
-    <section th:replace="administrador/fragmentoProfesores :: primeraFila"/>
-    <!--<section th:replace="administrador/fragmentoProfesores :: tituloProfesores"/>
-    <section th:replace="administrador/fragmentoProfesores :: formProfesor"/>-->
+    <section th:replace="layout/plantillaAdministradores::tituloCrear"/>
+    <section th:replace="registro/fragmentoAdministradores :: registroAdministradores"/>
     <footer th:replace="layout/plantillaAdministradores::footer"></footer>
 </body>
 </html>

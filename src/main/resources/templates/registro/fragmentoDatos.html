@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head"></head>
+    <body>
+        <header th:replace="layout/plantillaAdministradores::header"></header>
+        <!-- Sección para mostrar el titulo -->
+        <section th:fragment="tituloDatos" id="tituloDatos" style="background-color: #EDFEFF;">
+            <div class="container p-4" >
+                <div class="row">
+                    <div class="col-md-9">
+                    </div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Datos</h1>
+                </div>
+            </div>
+        </section>
+        <!-- Sección principal para mostrar form de contacto-->
+        <section th:fragment="registroDatos" id="registroDatos">
+            <div class="container p-1" >
+                <form th:action="@{/datos}" th:object="${datos}"
+                      method="POST" class="was-validated" enctype="multipart/form-data" >
+                    <div th:if="${mensajeConfirmacion}" class="alert alert-success" role="alert">
+                        <p th:text="${mensajeConfirmacion}"></p>
+                    </div>
+                    <div class="modal-body p-1">
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="guia">[[#{crea.guia}]]</label>
+                                <input type="text" class="form-control" name="guia" required="true"/>
+                            </div>
+                            <div class="mb-3 col">
+                                <label for="seccion">[[#{crea.seccion}]]</label>
+                                <input type="text" class="form-control" name="seccion" required="true"/>
+                            </div>
+                        </div>
+                        <div class="container p-1" >
+                            <div class="row">
+                                <div class="col-md-9">
+                                </div>
+                            </div>
+                            <div class="text-center mt-3 p-1">
+                                <!-- Subtitulo -->
+                                <h2>Horario</h2>
+                            </div>
+                        </div>
+                        <div class="container p-1" >
+                            <div class="row">
+                                <div class="col-md-9">
+                                </div>
+                            </div>
+                            <div class="mt-3 p-1">
+                                <!--Subtitulo -->
+                                <h4>Lunes</h4>
+                            </div>
+                        </div>
+                        <!-- Lecciones del Lunes-->
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionL1">[[#{leccion.1}]]</label>
+                                    <input type="text" class="form-control" name="leccionL1"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionL2">[[#{leccion.2}]]</label>
+                                    <input type="text" class="form-control" name="leccionL2"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionL3">[[#{leccion.3}]]</label>
+                                    <input type="text" class="form-control" name="leccionL3"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionL2">[[#{leccion.4}]]</label>
+                                    <input type="text" class="form-control" name="leccionL4"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionL5">[[#{leccion.5}]]</label>
+                                    <input type="text" class="form-control" name="leccionL5"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionL6">[[#{leccion.6}]]</label>
+                                    <input type="text" class="form-control" name="leccionL6"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionL7">[[#{leccion.7}]]</label>
+                                    <input type="text" class="form-control" name="leccionL7"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionL8">[[#{leccion.8}]]</label>
+                                    <input type="text" class="form-control" name="leccionL8"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionL9">[[#{leccion.9}]]</label>
+                                    <input type="text" class="form-control" name="leccionL9"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionL10">[[#{leccion.10}]]</label>
+                                    <input type="text" class="form-control" name="leccionL10"/>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="container p-1" >
+                            <div class="row">
+                                <div class="col-md-9">
+                                </div>
+                            </div>
+                            <div class="mt-3 p-1">
+                                <!--Subtitulo -->
+                                <h4>Martes</h4>
+                            </div>
+                        </div>
+                        <!-- Lecciones del Martes-->
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionK1">[[#{leccion.1}]]</label>
+                                    <input type="text" class="form-control" name="leccionK1"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionK2">[[#{leccion.2}]]</label>
+                                    <input type="text" class="form-control" name="leccionK2"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionK3">[[#{leccion.3}]]</label>
+                                    <input type="text" class="form-control" name="leccionK3"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionK4">[[#{leccion.4}]]</label>
+                                    <input type="text" class="form-control" name="leccionK4"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionK5">[[#{leccion.5}]]</label>
+                                    <input type="text" class="form-control" name="leccionK5"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionK6">[[#{leccion.6}]]</label>
+                                    <input type="text" class="form-control" name="leccionK6"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionK7">[[#{leccion.7}]]</label>
+                                    <input type="text" class="form-control" name="leccionK7"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionK8">[[#{leccion.8}]]</label>
+                                    <input type="text" class="form-control" name="leccionK8"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionK9">[[#{leccion.9}]]</label>
+                                    <input type="text" class="form-control" name="leccionK9"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionK10">[[#{leccion.10}]]</label>
+                                    <input type="text" class="form-control" name="leccionK10"/>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="container p-1" >
+                            <div class="row">
+                                <div class="col-md-9">
+                                </div>
+                            </div>
+                            <div class="mt-3 p-1">
+                                <!--Subtitulo -->
+                                <h4>Miércoles</h4>
+                            </div>
+                        </div>
+                        <!-- Lecciones del Miercoles-->
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionM1">[[#{leccion.1}]]</label>
+                                    <input type="text" class="form-control" name="leccionM1"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionM2">[[#{leccion.2}]]</label>
+                                    <input type="text" class="form-control" name="leccionM2"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionM3">[[#{leccion.3}]]</label>
+                                    <input type="text" class="form-control" name="leccionM3"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionM4">[[#{leccion.4}]]</label>
+                                    <input type="text" class="form-control" name="leccionM4"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionM5">[[#{leccion.5}]]</label>
+                                    <input type="text" class="form-control" name="leccionM5"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionM6">[[#{leccion.6}]]</label>
+                                    <input type="text" class="form-control" name="leccionM6"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionM7">[[#{leccion.7}]]</label>
+                                    <input type="text" class="form-control" name="leccionM7"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionM8">[[#{leccion.8}]]</label>
+                                    <input type="text" class="form-control" name="leccionM8"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionM9">[[#{leccion.9}]]</label>
+                                    <input type="text" class="form-control" name="leccionM9"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionM10">[[#{leccion.10}]]</label>
+                                    <input type="text" class="form-control" name="leccionM10"/>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="container p-1" >
+                            <div class="row">
+                                <div class="col-md-9">
+                                </div>
+                            </div>
+                            <div class="mt-3 p-1">
+                                <!--Subtitulo -->
+                                <h4>Jueves</h4>
+                            </div>
+                        </div>
+                        <!-- Lecciones del Jueves-->
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionJ1">[[#{leccion.1}]]</label>
+                                    <input type="text" class="form-control" name="leccionJ1"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionJ2">[[#{leccion.2}]]</label>
+                                    <input type="text" class="form-control" name="leccionJ2"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionJ3">[[#{leccion.3}]]</label>
+                                    <input type="text" class="form-control" name="leccionJ3"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionJ4">[[#{leccion.4}]]</label>
+                                    <input type="text" class="form-control" name="leccionJ4"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionJ5">[[#{leccion.5}]]</label>
+                                    <input type="text" class="form-control" name="leccionJ5"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionJ6">[[#{leccion.6}]]</label>
+                                    <input type="text" class="form-control" name="leccionJ6"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionJ7">[[#{leccion.7}]]</label>
+                                    <input type="text" class="form-control" name="leccionJ7"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionJ8">[[#{leccion.8}]]</label>
+                                    <input type="text" class="form-control" name="leccionJ8"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionJ9">[[#{leccion.9}]]</label>
+                                    <input type="text" class="form-control" name="leccionJ9"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionJ10">[[#{leccion.10}]]</label>
+                                    <input type="text" class="form-control" name="leccionJ10"/>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="container p-1" >
+                            <div class="row">
+                                <div class="col-md-9">
+                                </div>
+                            </div>
+                            <div class="mt-3 p-1">
+                                <!--Subtitulo -->
+                                <h4>Viernes</h4>
+                            </div>
+                        </div>
+                        <!-- Lecciones del Viernes-->
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionV1">[[#{leccion.1}]]</label>
+                                    <input type="text" class="form-control" name="leccionV1"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionV2">[[#{leccion.2}]]</label>
+                                    <input type="text" class="form-control" name="leccionV2"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionV3">[[#{leccion.3}]]</label>
+                                    <input type="text" class="form-control" name="leccionV3"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionV4">[[#{leccion.4}]]</label>
+                                    <input type="text" class="form-control" name="leccionV4"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionV5">[[#{leccion.5}]]</label>
+                                    <input type="text" class="form-control" name="leccionV5"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionV6">[[#{leccion.6}]]</label>
+                                    <input type="text" class="form-control" name="leccionV6"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionV7">[[#{leccion.7}]]</label>
+                                    <input type="text" class="form-control" name="leccionV7"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionV8">[[#{leccion.8}]]</label>
+                                    <input type="text" class="form-control" name="leccionV8"/>
+                                </div>   
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col">
+                                    <label for="leccionV9">[[#{leccion.9}]]</label>
+                                    <input type="text" class="form-control" name="leccionV9"/>
+                                </div>
+                                <div class="mb-3 col">
+                                    <label for="leccionV10">[[#{leccion.10}]]</label>
+                                    <input type="text" class="form-control" name="leccionV10"/>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button class="mb-3 btn btn-lg text-light fs-5 mb-3 mt-3 rounded-0" type="submit" style="background-color: #0CBBC7;">Guardar</button>
+                        </div>
+                </form>
+            </div>
+            <br></br>
+        </section>
+    </body>
+</html>
