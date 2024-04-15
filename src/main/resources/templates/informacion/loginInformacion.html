@@ -1,44 +1,52 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml"       
-      xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="layout/plantilla::head">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Colegio El Saber</title>
+        <meta charset="UTF-8"/>
     </head>
     <body>
-        <header th:replace="layout/plantilla::header"></header>
-        <!-- Sección principal para mostrar el formulario de inicio de sesión -->
-        <section th:fragment="resumenLogin" id="resumenLogin" style="background-color: #EDFEFF;">
-
-            <div class="container">
-                <div class="row">
+        <header th:replace="~{layout/plantilla :: header}"/>
+        <div class="container">
+            <div class="row">
                 <div class="text-left p-1">
-                    <section th:fragment="InicioSesion" id="InicioSesion" ></section>
                     <!-- Formulario de inicio de sesión -->
-                    <h1 style="margin-top:100px" >Iniciar sesión</h1>
-                    <br></br>
-                    <div style="float: left; width: 50%;">
-                        
-                        <label for="correoElectronico" class="form-label mb-3">Correo Electrónico</label>
-                        <input type="email" class="form-control mb-3" id="direccionCorreo" placeholder="Correo electrónico">
-                   
-                    
-                        <label for="passwordUsername" class="form-label mb-3">Password</label>
-                        <input type="password" class="form-control mb-3" id="contraseña" placeholder="Contraseña">
-                        
-                        <!-- Botón -->
-                        <div class="mt-20">
-                            <a class="btn text-light fs-5 mb-3 mt-3 rounded-0" role="button" style="background-color: #0CBBC7;">
-                                Iniciar Sesión
-                            </a>
+                    <form method="POST" th:action="@{/login}">
+                        <h1 style="margin-top:100px" >Iniciar sesión</h1>
+                        <br></br>
+                        <div style="float: left; width: 50%;">
+
+                            <label for="correoElectronico" class=" mb-3">[[#{login.username}]]<span style="font-weight: lighter;"> *Institucional*</span></label>
+                            <input class="form-control" type="email" name="username" id="username" placeholder="@elsaber.edu"/>
+
+                            <label for="password" class="form-label mb-3">[[#{login.password}]]</label>
+                            <input type="password" class="form-control mb-3" name="password" id="password">
+
+                                <div style="text-align: right;">
+                                    <a th:href="@{/registro/recordar}" style="text-decoration: none; color:black; font-weight: lighter;"> [[#{accion.recordar}]]</a>
+                                </div>
+
+                                <!-- Botón -->
+                                <div class="mt-20">
+                                    <a class="btn text-light fs-5 mb-3 mt-3 rounded-0" type="submit" role="button" style="background-color: #0CBBC7;">
+                                        [[#{login.login}]]
+                                    </a>
+                                </div>
+                                </form>
                         </div>
-                    </div>
-                    <div style="float: left; width: 50%;">
-                        <img src="https://taskify-work-planner.vercel.app/assets/students-v06NTdGZ.svg" alt="Imagen de estudiantes" height="500" style="display: block; margin: auto; padding: 20px; margin-right: -20px;">
-                    </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div style="float: left; width: 50%;">
+                            <img src="https://img.freepik.com/vector-gratis/ilustracion-concepto-estudiantes_114360-8267.jpg?w=740&t=st=1713131591~exp=1713132191~hmac=da00d186f84ca223cb26abb5777fcfbf970dbe3a8822bf2f2e22cc5901b59251" alt="Imagen de estudiantes" height="500" style="display: block; margin: auto; padding: 20px; margin-right: -20px;">
+                        </div>
                 </div>
             </div>
             <br></br>
-        </section>
+            <div th:if="${param.error != null}">
+                <h3>[[#{error.login}]]</h3>
+            </div>
+        <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
 </html>
 
