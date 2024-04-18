@@ -21,7 +21,7 @@ public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long noDeCarnet;
 
     @NotEmpty
     private String username;
@@ -37,6 +37,6 @@ public class Usuario implements Serializable {
     private boolean activo;
 
     @OneToMany
-    @JoinColumn(name="id_usuario")
+    @JoinColumn(name="no_de_carnet")
     private List<Rol> roles;
 }
