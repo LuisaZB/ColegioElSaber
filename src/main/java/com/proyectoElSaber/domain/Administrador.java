@@ -10,10 +10,7 @@ import jakarta.persistence.Table;
 import java.io.Serializable;
 import lombok.Data;
 
-/**
- *
- * @author johnn
- */
+
 @Data
 @Entity
 @Table(name = "administrador")
