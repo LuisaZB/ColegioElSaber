@@ -6,7 +6,9 @@ package com.proyectoElSaber.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -20,5 +22,14 @@ public class NotasController {
         model.addAttribute("attribute", "value");
         return "estudiante/notas";
     }
-    
+//    @PostMapping("/notas")
+//    public String consultaQuery1(@RequestParam(value = "precioInf") double precioInf,
+//            @RequestParam(value = "precioSup") double precioSup, Model model) {
+//        var productos = productoService.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
+//        model.addAttribute("productos", productos);
+//        model.addAttribute("precioInf", precioInf);
+//        model.addAttribute("precioSup", precioSup);
+//        model.addAttribute("totalProductos", productos.size());
+//        return "/pruebas/listado2";
+//    }
 }

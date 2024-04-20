@@ -44,7 +44,8 @@
             </div>
             <br></br>
             <div th:if="${param.error != null}">
-                <h3>[[#{error.login}]]</h3>
+                <a th:href="@{/registro/recordar}">
+                
             </div>
         <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
