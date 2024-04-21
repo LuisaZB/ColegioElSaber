@@ -6,7 +6,7 @@
         <!-- Sección principal para mostrar form de contacto-->
         <section th:fragment="registroAdministradores" id="registroAdministradores">
             <div class="container p-2" >
-                <form th:action="@{/administrador}" th:object="${administrador}"
+                <form th:action="@{/registroAdministradores}" th:object="${administrador}"
                       method="POST" class="was-validated" enctype="multipart/form-data" >
                     <div th:if="${mensajeConfirmacion}" class="alert alert-success" role="alert">
                         <p th:text="${mensajeConfirmacion}"></p>
@@ -16,10 +16,10 @@
                             <div class="mb-3 col">
                                 <h5>Rol Administrador</h5>
                             </div>
-                            <div class="mb-3 col">
+                          <!--  <div class="mb-3 col">
                                 <label for="subirFoto">[[#{crea.imagen}]]</label>
                                 <input class="form-control" type="file" name="subirFoto" onchange="readURL(this);"/>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="row">
                             <div class="mb-3 col">
@@ -27,8 +27,8 @@
                                 <input type="text" class="form-control" name="nombreCompleto" required="true"/>
                             </div>
                             <div class="mb-3 col">
-                                <label for="noDecarnet">[[#{crea.carnet}]]</label>
-                                <input type="text" class="form-control" name="noDecarnet" required="true"/>
+                                <label for="noDeCarnet">[[#{crea.carnet}]]</label>
+                                <input type="text" class="form-control" name="noDeCarnet" required="true"/>
                             </div>
                         </div>
                         <div class="row">

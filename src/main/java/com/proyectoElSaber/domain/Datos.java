@@ -17,61 +17,112 @@ public class Datos implements Serializable {
     @Id
     @Column(name = "seccion")
     private String seccion;
+    @Column(name = "guia")
     private String guia;
     
+    @Column(name = "leccion_l_1")
     private String leccionL1;
+    @Column(name = "leccion_l_2")
     private String leccionL2;
+    @Column(name = "leccion_l_3")
     private String leccionL3;
+    @Column(name = "leccion_l_4")
     private String leccionL4;
+    @Column(name = "leccion_l_5")
     private String leccionL5;
+    @Column(name = "leccion_l_6")
     private String leccionL6;
+    @Column(name = "leccion_l_7")
     private String leccionL7;
+    @Column(name = "leccion_l_8")
     private String leccionL8;
+    @Column(name = "leccion_l_9")
     private String leccionL9;
+    @Column(name = "leccion_l_10")
     private String leccionL10;
     
+    @Column(name = "leccion_k_1")
     private String leccionK1;
+    @Column(name = "leccion_k_2")
     private String leccionK2;
+    @Column(name = "leccion_k_3")
     private String leccionK3;
+    @Column(name = "leccion_k_4")
     private String leccionK4;
+    @Column(name = "leccion_k_5")
     private String leccionK5;
+    @Column(name = "leccion_k_6")
     private String leccionK6;
+    @Column(name = "leccion_k_7")
     private String leccionK7;
+    @Column(name = "leccion_k_8")
     private String leccionK8;
+    @Column(name = "leccion_k_9")
     private String leccionK9;
+    @Column(name = "leccion_k_10")
     private String leccionK10;
     
+    @Column(name = "leccion_m_1")
     private String leccionM1;
+    @Column(name = "leccion_m_2")
     private String leccionM2;
+    @Column(name = "leccion_m_3")
     private String leccionM3;
+    @Column(name = "leccion_m_4")
     private String leccionM4;
+    @Column(name = "leccion_m_5")
     private String leccionM5;
+    @Column(name = "leccion_m_6")
     private String leccionM6;
+    @Column(name = "leccion_m_7")
     private String leccionM7;
+    @Column(name = "leccion_m_8")
     private String leccionM8;
+    @Column(name = "leccion_m_9")
     private String leccionM9;
+    @Column(name = "leccion_m_10")
     private String leccionM10;
     
+    @Column(name = "leccion_j_1")
     private String leccionJ1;
+    @Column(name = "leccion_j_2")
     private String leccionJ2;
+    @Column(name = "leccion_j_3")
     private String leccionJ3;
+    @Column(name = "leccion_j_4")
     private String leccionJ4;
+    @Column(name = "leccion_j_5")
     private String leccionJ5;
+    @Column(name = "leccion_j_6")
     private String leccionJ6;
+    @Column(name = "leccion_j_7")
     private String leccionJ7;
+    @Column(name = "leccion_j_8")
     private String leccionJ8;
+    @Column(name = "leccion_j_9")
     private String leccionJ9;
+    @Column(name = "leccion_j_10")
     private String leccionJ10;
     
+    @Column(name = "leccion_v_1")
     private String leccionV1;
+    @Column(name = "leccion_v_2")
     private String leccionV2;
+    @Column(name = "leccion_v_3")
     private String leccionV3;
+    @Column(name = "leccion_v_4")
     private String leccionV4;
+    @Column(name = "leccion_v_5")
     private String leccionV5;
+    @Column(name = "leccion_v_6")
     private String leccionV6;
+    @Column(name = "leccion_v_7")
     private String leccionV7;
+    @Column(name = "leccion_v_8")
     private String leccionV8;
+    @Column(name = "leccion_v_9")
     private String leccionV9;
+    @Column(name = "leccion_v_10")
     private String leccionV10;
 
     public Datos() {

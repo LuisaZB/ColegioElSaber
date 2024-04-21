@@ -6,7 +6,7 @@
         <!-- Sección principal para mostrar form de contacto-->
         <section th:fragment="registroEstudiantes" id="registroEstudiantes">
             <div class="container p-1" >
-                <form th:action="@{/estudiante}" th:object="${estudiante}"
+                <form th:action="@{/registroEstudiantes}" th:object="${estudiante}"
                       method="POST" class="was-validated" enctype="multipart/form-data" >
                     <div th:if="${mensajeConfirmacion}" class="alert alert-success" role="alert">
                         <p th:text="${mensajeConfirmacion}"></p>
@@ -20,20 +20,20 @@
                                 <label for="seccion">[[#{crea.seccion}]]</label>
                                 <input type="text" class="form-control" name="seccion" required="true"/>
                             </div>
-                            <div class="mb-3 col">
+                            <!--<div class="mb-3 col">
                                 <label for="subirFoto">[[#{crea.imagen}]]</label>
                                 <input class="form-control" type="file" name="subirFoto" onchange="readURL(this);"/>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="row">
                             <div class="mb-3 col">
                                 <label for="nombreCompleto">[[#{crea.nombre}]]</label>
                                 <input type="text" class="form-control" name="nombreCompleto" required="true"/>
                             </div>
-                            <!-- <div class="mb-3 col">
-                                <label for="noDecarnet">[[#{crea.carnet}]]</label>
-                                <input type="text" class="form-control" name="noDecarnet" required="true"/>
-                            </div>-->
+                             <div class="mb-3 col">
+                                <label for="noDeCarnet">[[#{crea.carnet}]]</label>
+                                <input type="text" class="form-control" name="noDeCarne" required="true"/>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="mb-3 col">
@@ -52,7 +52,7 @@
                             </div>
                             <div class="mb-3 col">
                                 <label for="correoInstitucional">[[#{crea.institucional}]]</label>
-                                <input type="text" class="form-control" name="correoInstitucional" required="true" placeholder="@elsaber.edu"/>
+                                <input type="email" class="form-control" name="correoInstitucional" required="true" placeholder="@elsaber.edu"/>
                             </div>   
                         </div>
                         <div class="mb-3">
@@ -108,7 +108,7 @@
                             </div>
                             <div class="mb-3 col">
                                 <label for="correoElectronicoEncargado">[[#{crea.personal}]]</label>
-                                <input type="text" class="form-control" name="correoElectronicoEncargado" required="true"/>
+                                <input type="email" class="form-control" name="correoElectronicoEncargado" required="true"/>
                             </div>   
                         </div>
                         <div class="mb-3">
@@ -139,36 +139,36 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="mb-3 col">
-                                <label for="nombreCompletoEncargado">[[#{crea.nombre}]]</label>
+                                <label for="nombreCompletoEncargad2o">[[#{crea.nombre}]]</label>
                                 <input type="text" class="form-control" name="nombreCompletoEncargado"/>
                             </div>
                             <div class="mb-3 col">
                                 <label for="noDeIdentificacionEncargado">[[#{crea.identificacion}]]</label>
-                                <input type="text" class="form-control" name="noDeIdentificacionEncargado"/>
+                                <input type="text" class="form-control" name="noDeIdentificacionEncargado2"/>
                             </div>
                         </div>
                         <div class="row">
                             <div class="mb-3 col">
-                                <label for="telefonoMovilEncargado">[[#{crea.telefonoMovil}]]</label>
-                                <input type="text" class="form-control" name="telefonoMovilEncargado"/>
+                                <label for="telefonoMovilEncargado2">[[#{crea.telefonoMovil}]]</label>
+                                <input type="text" class="form-control" name="telefonoMovilEncargado2"/>
                             </div>
                             <div class="mb-3 col">
-                                <label for="correoElectronicoEncargado">[[#{crea.personal}]]</label>
-                                <input type="text" class="form-control" name="correoElectronicoEncargado"/>
+                                <label for="correoElectronicoEncargado2">[[#{crea.personal}]]</label>
+                                <input type="email" class="form-control" name="correoElectronicoEncargado2"/>
                             </div>   
                         </div>
                         <div class="mb-3">
-                            <label for="trabajaActualmenteEncargado">[[#{crea.estadoTrabajo}]]</label>
-                            <input class="form-check-input" type="checkbox" name="trabajaActualmenteEncargado" id="trabajaActualmenteEncargado"/>
+                            <label for="trabajaActualmenteEncargado2">[[#{crea.estadoTrabajo}]]</label>
+                            <input class="form-check-input" type="checkbox" name="trabajaActualmenteEncargado2" id="trabajaActualmenteEncargado2"/>
                         </div>
                         <div class="row">
                             <div class="mb-3 col">
-                                <label for="lugarDeTrabajoEncargado">[[#{crea.lugarTrabajo}]]</label>
-                                <input type="text" class="form-control" name="lugarDeTrabajoEncargado"/>
+                                <label for="lugarDeTrabajoEncargado2">[[#{crea.lugarTrabajo}]]</label>
+                                <input type="text" class="form-control" name="lugarDeTrabajoEncargado2"/>
                             </div>
                             <div class="mb-3 col">
-                                <label for="telefonoTrabajoEncargado">[[#{crea.telefonoTrabajo}]]</label>
-                                <input type="text" class="form-control" name="telefonoTrabajoEncargado"/>
+                                <label for="telefonoTrabajoEncargado2">[[#{crea.telefonoTrabajo}]]</label>
+                                <input type="text" class="form-control" name="telefonoTrabajoEncargado2"/>
                             </div>   
                         </div>
                     </div>

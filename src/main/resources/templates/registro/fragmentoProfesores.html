@@ -6,7 +6,7 @@
 
         <section th:fragment="registroProfesores" id="registroProfesores">
             <div class="container p-1" >
-                <form th:action="@{/estudiante}" th:object="${estudiante}"
+                <form th:action="@{/registroProfesores}" th:object="${profesor}"
                       method="POST" class="was-validated" enctype="multipart/form-data" >
                     <div th:if="${mensajeConfirmacion}" class="alert alert-success" role="alert">
                         <p th:text="${mensajeConfirmacion}"></p>
@@ -20,20 +20,19 @@
                                 <label for="seccion">[[#{crea.seccion}]]</label>
                                 <input type="text" class="form-control" name="seccion"/>
                             </div>
-                            <div class="mb-3 col">
+                            <!--<div class="mb-3 col">
                                 <label for="subirFoto">[[#{crea.imagen}]]</label>
                                 <input class="form-control" type="file" name="subirFoto" onchange="readURL(this);"/>
-                            </div>
+                            </div>-->
                         </div>
-
                         <div class="row">
                             <div class="mb-3 col">
                                 <label for="nombreCompleto">[[#{crea.nombre}]]</label>
                                 <input type="text" class="form-control" name="nombreCompleto" required="true"/>
                             </div>
                             <div class="mb-3 col">
-                                <label for="noDecarnet">[[#{crea.carnet}]]</label>
-                                <input type="text" class="form-control" name="noDecarnet" required="true"/>
+                                <label for="noDeCarnet">[[#{crea.carnet}]]</label>
+                                <input type="text" class="form-control" name="noDeCarnet" required="true"/>
                             </div>
                         </div>
                         <div class="row">
@@ -53,7 +52,7 @@
                             </div>
                             <div class="mb-3 col">
                                 <label for="correoInstitucional">[[#{crea.institucional}]]</label>
-                                <input type="text" class="form-control" name="correoInstitucional" required="true" placeholder="@elsaber.edu"/>
+                                <input type="email" class="form-control" name="correoInstitucional" required="true" placeholder="@elsaber.edu"/>
                             </div>   
                         </div>
                         <div class="row">
