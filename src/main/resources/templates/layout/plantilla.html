@@ -53,8 +53,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     <li ><a class="dropdown-item" th:href="@{/admisiones}">Admisiones</a></li>
                                     <li ><a class="dropdown-item"  th:href="@{/contacto}">Contacto</a></li>
                                     <li ><a class="dropdown-item"  th:href="@{/login}">Iniciar Sesión</a></li>
-                                    <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="dropdown-item" th:href="@{/datos}">[[#{plantillaAdmin.datos}]]</a></li>
-                                    <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="dropdown-item" th:href="@{/administrar}">[[#{plantillaAdmin.administrar}]]</a></li>
                                 </ul>
                             </li>
                         </ul> 
@@ -64,6 +62,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <ul class="dropdown-menu dropdown-menu-white">
                                     <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="dropdown-item" th:href="@{/datos}">[[#{plantillaAdmin.datos}]]</a></li>
                                     <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="dropdown-item" th:href="@{/administrar}">[[#{plantillaAdmin.administrar}]]</a></li>
+                                    <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="dropdown-item" th:href="@{/mensajes}">[[#{plantillaAdmin.buzon}]]</a></li>
                                 </ul>
                             </li>
                         </ul>
