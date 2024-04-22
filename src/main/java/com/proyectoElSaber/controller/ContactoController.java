@@ -36,7 +36,7 @@ public class ContactoController {
         return "/contacto/contacto";
     }
 
-    @GetMapping("/mensajes/eliminar/{idContacto}")
+    @GetMapping("/mensajes/eliminar/{idMensaje}")
     public String contactoEliminar(Contacto contacto) {
         contactoService.delete(contacto);
         return "redirect:/mensajes";

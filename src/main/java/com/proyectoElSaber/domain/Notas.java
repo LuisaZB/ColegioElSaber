@@ -22,33 +22,29 @@ public class Notas implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codigo")
     private Long codigo;
+    @Column(name = "no_de_carnet")
+    private String noDeCarnet;
     private String materia;
     private String profesor;
     private double notaProyecto;
     private double notaFinal;
     private String estado;
-    
-    @OneToOne
-    @JoinColumn(name = "no_de_carnet")
-    Usuario usuario;
 //    private String noDeCarnet2 = usuario.getNoDeCarnet();
-    @ManyToOne
-    @JoinColumn(name = "id_asignatura")
-    Asignatura asignatura;
+
 
     public Notas() {
-        this.usuario = new Usuario();
+
     }
 
-    public Notas(Long codigo, String materia, String profesor, double notaProyecto, double notaFinal, String estado, Usuario usuario, Asignatura asignatura) {
+    public Notas(Long codigo, String materia, String profesor, double notaProyecto, double notaFinal, String estado, String noDeCarnet, Asignatura asignatura) {
         this.codigo = codigo;
         this.materia = materia;
         this.profesor = profesor;
         this.notaProyecto = notaProyecto;
         this.notaFinal = notaFinal;
         this.estado = estado;
-        this.usuario = usuario;
-        this.asignatura = asignatura;
+        this.noDeCarnet = noDeCarnet;
+
     }
 
     

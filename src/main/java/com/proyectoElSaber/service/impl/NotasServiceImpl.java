@@ -16,8 +16,11 @@ public class NotasServiceImpl implements NotasService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Notas> getNotass() {
+    public List<Notas> getNotass(boolean activos) {
         var lista = notasDao.findAll();
+//        if (activos) {
+//            lista.removeIf(e -> !e.getNoDeCarnet());
+//        }
         return lista;
     }
 
@@ -46,5 +49,9 @@ public class NotasServiceImpl implements NotasService {
         return notasDao.metodoNativo(noDeCarnet);
     }
 
-   
+    @Override
+    public List<Notas> findByNoDeCarnet(String noDeCarnet) {
+        return notasDao.findByNoDeCarnet(noDeCarnet);
+    }
+
 }

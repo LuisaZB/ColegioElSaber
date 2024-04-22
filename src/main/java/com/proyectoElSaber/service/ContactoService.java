@@ -8,4 +8,5 @@ public interface ContactoService {
     public Contacto getContacto(Contacto contacto);
     public void delete(Contacto contacto);
     public void save(Contacto contacto);
+    public void eliminarPorIdMensaje(Long idMensaje);
 }

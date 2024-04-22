@@ -9,7 +9,7 @@ import java.util.List;
 
 
 public interface NotasService {
-    public List<Notas> getNotass();
+    public List<Notas> getNotass(boolean activos);
 
 
     public Notas getNotas(Notas notas);
@@ -21,5 +21,6 @@ public interface NotasService {
     public void delete(Notas notas);
 
    
+    public List<Notas> findByNoDeCarnet(String noDeCarnet);
     public List<Notas> metodoNativo(String noDeCarnet);
 }

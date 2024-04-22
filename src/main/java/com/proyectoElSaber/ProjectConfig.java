@@ -92,13 +92,13 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .logout((logout) -> logout.permitAll());
         return http.build();
     }
-//    @Autowired
-//    private UserDetailsService userDetailsService;
-//
-//    @Autowired
-//    public void configurerGlobal(AuthenticationManagerBuilder build) throws Exception {
-//        build.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
-//    }
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @Autowired
+    public void configurerGlobal(AuthenticationManagerBuilder build) throws Exception {
+        build.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
+    }
     @Bean
     public UserDetailsService users() {
         UserDetails admin = User.builder()

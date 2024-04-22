@@ -8,8 +8,10 @@ import org.springframework.data.repository.query.Param;
 
 public interface NotasDao extends JpaRepository<Notas, Long> {
 
+    public List<Notas> findByNoDeCarnet(String noDeCarnet);
+
     @Query(nativeQuery = true,
-            value = "SELECT * FROM notas WHERE notas.no_de_carnet = :noDeCarnet")
+            value = "SELECT * FROM notas WHERE calificaciones.no_de_carnet = :noDeCarnet")
     public List<Notas> metodoNativo(@Param("noDeCarnet") String noDeCarnet);
 
 }

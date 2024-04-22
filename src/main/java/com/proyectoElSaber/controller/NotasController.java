@@ -4,15 +4,13 @@
  */
 package com.proyectoElSaber.controller;
 
-import com.proyectoElSaber.domain.Notas;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import com.proyectoElSaber.service.NotasService;
-import java.util.List;
+import com.proyectoElSaber.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -20,21 +18,23 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 @Controller
 public class NotasController {
-    
+
     @Autowired
     private NotasService notasService;
-    
+
+
     @RequestMapping("/notas")
-    
-        public String consultaPorCarnet(@RequestParam(value = "noDeCarnet") String noDeCarnet, Model model) {
-        List<Notas> notas = notasService.metodoNativo(noDeCarnet);
+    public String page(@RequestParam(value = "noDeCarnet") String noDeCarnet, Model model) {
+        var notas = notasService.findByNoDeCarnet(noDeCarnet);
         model.addAttribute("notas", notas);
-        return "/notas";
+        return "/estudiante/queryNotas";
     }
+
 //    @PostMapping("/consultaPorCarnet")
-//    public String consultaPorCarnet(@RequestParam(value = "noDeCarnet") String noDeCarnet, Model model) {
-//        List<Notas> notas = notasService.metodoNativo(noDeCarnet);
+//    public String consultaPorCarnet(Usuario usuario, Model model) {
+//
+//        List<Notas> notas = notasService.metodoNativo(session.setAttribute("usuario.noDeCarnet", usuario.getNoDeCarnet()));
 //        model.addAttribute("notas", notas);
-//        return "/ruta/a/tu/vista"; // Cambia "/ruta/a/tu/vista" por la ruta de tu vista
+//        return "/estudiante/queryNotas";
 //    }
 }

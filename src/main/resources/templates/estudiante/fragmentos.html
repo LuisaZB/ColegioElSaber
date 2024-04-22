@@ -26,34 +26,40 @@
                         <div class="card">
                             <div class="card-header">
                             </div>
-                            <div>
-                                <table class="table table-striped table-hover">
-                                    <thead class="table-dark">
-                                        <tr><th></th>
 
-                                            <th>[[#{notas.codigo}]]</th>
-                                            <th>[[#{notas.materia}]]</th>
-                                            <th>[[#{notas.profesor}]]</th>
-                                            <th>[[#{notas.proyecto}]]</th>
-                                            <th>[[#{notas.final}]]</th>
-                                            <th>[[#{notas.estado}]]</th>
-                                            <th></th></tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr th:each="nota : ${notas}">
-                                            <td>[[${nota.codigo}]]</td>
-                                            <td>[[${nota.materia}]]</td>
-                                            <td>[[${nota.profesor}]]</td>
-                                            <td>[[${nota.notaProyecto}]]</td>
-                                            <td>[[${nota.notaFinal}]]</td>
-                                            <td>[[${nota.estado}]]</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+
+                            <table class="table table-striped table-hover">
+                                <thead class="table-dark">
+                                    <form th:action="@{/notas}" method="get">
+                                        <input type="hidden" name="noDeCarnet" th:value="${session.noDeCarnet}">
+                                            <button type="submit">Ver Notas</button>
+                                    </form>
+                                    <tr>
+                                        <th>[[#{notas.codigo}]]</th>
+                                        <th>[[#{notas.materia}]]</th>
+                                        <th>[[#{notas.profesor}]]</th>
+                                        <th>[[#{notas.proyecto}]]</th>
+                                        <th>[[#{notas.final}]]</th>
+                                        <th>[[#{notas.estado}]]</th>
+                                        <th></th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="nota : ${notas}">
+                                        <td>[[${nota.codigo}]]</td>
+                                        <td>[[${nota.materia}]]</td>
+                                        <td>[[${nota.profesor}]]</td>
+                                        <td>[[${nota.notaProyecto}]]</td>
+                                        <td>[[${nota.notaFinal}]]</td>
+                                        <td>[[${nota.estado}]]</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
         <section th:fragment="datosDescripcion" id="datosDescripcion" >
@@ -69,6 +75,35 @@
                     <p class="fs-5" >Si encuentra algún error en su información personal, por favor contactar al Departamento de Registro </p>
                     <p class="fs-5" >para actualizar sus datos</p>
                 </div>
+            </div>
+        </section>
+        <section th:fragment="pedirNotas" id="pedirNotas">
+            <div class="container">
+                <div class="row">
+                    <div class="center">
+                        <div class="card">
+                            <div class="card-header">
+                            </div>
+
+
+                            <div class="col-md-3">
+                                <form method="POST" th:action="@{/consultaPorCarnet}" 
+                                      class="was-validated">
+                                    <div class="card success">
+                                        <div class="card-footer text-center">
+                                            <button type="submit" class="btn btn-warning" th:value="@{${session.noDeCarnet}}">
+                                                <i class="fas fa-check"></i> Cargar Notas
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
         <section th:fragment="datosEstudiante" id="datosEstudiante" style="background-color: #EDFEFF;">
@@ -244,7 +279,7 @@
                                                 <th></th></tr>
                                         </thead>
                                         <tbody>
-                                            
+
 
 
                                         </tbody>

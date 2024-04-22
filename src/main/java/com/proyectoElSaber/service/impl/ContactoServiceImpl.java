@@ -15,23 +15,34 @@ public class ContactoServiceImpl implements ContactoService {
     private ContactoDao contactoDao;
 
     @Override
-    public void save(Contacto contacto) {
-        contactoDao.save(contacto);
-    }
-
-    @Override
+    @Transactional(readOnly = true)
     public List<Contacto> getMensajes() {
         var lista = contactoDao.findAll();
         return lista;
     }
 
     @Override
-    public void delete(Contacto contacto) {
-        contactoDao.delete(contacto);
-    }
-    @Override
     @Transactional(readOnly = true)
     public Contacto getContacto(Contacto contacto) {
         return contactoDao.findById(contacto.getIdMensaje()).orElse(null);
     }
+
+    @Override
+    @Transactional
+    public void save(Contacto contacto) {
+        contactoDao.save(contacto);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Contacto contacto) {
+        contactoDao.delete(contacto);
+    }
+
+    @Override
+    @Transactional
+    public void eliminarPorIdMensaje(Long idMensaje) {
+        contactoDao.eliminarPorIdMensaje(idMensaje);
+    }
+
 }
