@@ -37,23 +37,45 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <li class="nav-item px-2" sec:authorize="!isAuthenticated()"><a class="nav-link" th:href="@{/personal}">[[#{plantilla.personal}]]</a></li>
                             <li class="nav-item px-2" sec:authorize="!isAuthenticated()"><a class="nav-link" th:href="@{/servicios}">[[#{plantilla.servicios}]]</a></li>
                             <li class="nav-item px-2" sec:authorize="!isAuthenticated()"><a class="nav-link" th:href="@{/clubes}">[[#{plantilla.clubes}]]</a></li>
-                            <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ESTUDIANTE')"><a class="nav-link" th:href="@{/notas}">[[#{estudiante.notas}]] </a></li>
+                            <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ESTUDIANTE')"><a class="nav-link" th:href="@{/notas}" th:value="@{${session.noDeCarnet}}">[[#{estudiante.notas}]] </a></li>
                             <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ESTUDIANTE')"><a class="nav-link" th:href="@{/datospersonales}">[[#{estudiante.datos}]]</a></li>
                             <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ESTUDIANTE')"><a class="nav-link" th:href="@{/horario}">[[#{estudiante.horario}]]</a></li>
+                            <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="nav-link"  th:href="@{/registroEstudiantes}">[[#{plantillaAdmin.registroEstudiantes}]]</a></li>
+                            <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="nav-link" th:href="@{/registroProfesores}">[[#{plantillaAdmin.registroProfesores}]]</a></li>
+                            <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="nav-link" th:href="@{/registroAdministradores}">[[#{plantillaAdmin.registroAdministradores}]]</a></li>
+
                         </ul>
-                        <ul class="navbar-nav">
+                        
+                        <ul sec:authorize="!isAuthenticated()" class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Más</a>
                                 <ul class="dropdown-menu dropdown-menu-white">
-                                    <li><a class="dropdown-item" th:href="@{/admisiones}">Admisiones</a></li>
-                                    <li><a class="dropdown-item"  th:href="@{/contacto}">Contacto</a></li>
-                                    <li><a class="dropdown-item"  th:href="@{/login}">Login</a></li>
-                                    <li><a class="dropdown-item"  th:href="@{/registroEstudiantes}">Administrador</a></li>
-                                    <li><a class="dropdown-item"  th:href="@{/notas}">Estudiantes</a></li>
-
+                                    <li ><a class="dropdown-item" th:href="@{/admisiones}">Admisiones</a></li>
+                                    <li ><a class="dropdown-item"  th:href="@{/contacto}">Contacto</a></li>
+                                    <li ><a class="dropdown-item"  th:href="@{/login}">Iniciar Sesión</a></li>
+                                    <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="dropdown-item" th:href="@{/datos}">[[#{plantillaAdmin.datos}]]</a></li>
+                                    <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="dropdown-item" th:href="@{/administrar}">[[#{plantillaAdmin.administrar}]]</a></li>
                                 </ul>
                             </li>
                         </ul> 
+                        <ul sec:authorize="hasRole('ROLE_ADMIN')" class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Más</a>
+                                <ul class="dropdown-menu dropdown-menu-white">
+                                    <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="dropdown-item" th:href="@{/datos}">[[#{plantillaAdmin.datos}]]</a></li>
+                                    <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ADMIN')"><a class="dropdown-item" th:href="@{/administrar}">[[#{plantillaAdmin.administrar}]]</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav" sec:authorize="isAuthenticated()">
+                            <li class="nav-item my-auto">
+                                <form method="post" th:action="@{/logout}">
+                                    <button class="btn btn-black" type="submit">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                    </button>
+                                </form>
+                            </li>                            
+                        </ul>
                     </div>
                 </div>
             </nav>

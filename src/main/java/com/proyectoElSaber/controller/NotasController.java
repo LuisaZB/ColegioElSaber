@@ -4,11 +4,15 @@
  */
 package com.proyectoElSaber.controller;
 
+import com.proyectoElSaber.domain.Notas;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import com.proyectoElSaber.service.NotasService;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
@@ -17,19 +21,20 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class NotasController {
     
+    @Autowired
+    private NotasService notasService;
+    
     @RequestMapping("/notas")
-    public String page(Model model) {
-        model.addAttribute("attribute", "value");
-        return "estudiante/notas";
+    
+        public String consultaPorCarnet(@RequestParam(value = "noDeCarnet") String noDeCarnet, Model model) {
+        List<Notas> notas = notasService.metodoNativo(noDeCarnet);
+        model.addAttribute("notas", notas);
+        return "/notas";
     }
-//    @PostMapping("/notas")
-//    public String consultaQuery1(@RequestParam(value = "precioInf") double precioInf,
-//            @RequestParam(value = "precioSup") double precioSup, Model model) {
-//        var productos = productoService.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
-//        model.addAttribute("productos", productos);
-//        model.addAttribute("precioInf", precioInf);
-//        model.addAttribute("precioSup", precioSup);
-//        model.addAttribute("totalProductos", productos.size());
-//        return "/pruebas/listado2";
+//    @PostMapping("/consultaPorCarnet")
+//    public String consultaPorCarnet(@RequestParam(value = "noDeCarnet") String noDeCarnet, Model model) {
+//        List<Notas> notas = notasService.metodoNativo(noDeCarnet);
+//        model.addAttribute("notas", notas);
+//        return "/ruta/a/tu/vista"; // Cambia "/ruta/a/tu/vista" por la ruta de tu vista
 //    }
 }

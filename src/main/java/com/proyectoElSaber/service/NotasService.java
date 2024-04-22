@@ -12,13 +12,13 @@ public interface NotasService {
     public List<Notas> getNotass();
 
 
-    public Notas getNotas(Notas producto);
+    public Notas getNotas(Notas notas);
 
 
-    public void save(Notas producto);
+    public void save(Notas notas);
 
 
-    public void delete(Notas producto);
+    public void delete(Notas notas);
 
    
     public List<Notas> metodoNativo(String noDeCarnet);

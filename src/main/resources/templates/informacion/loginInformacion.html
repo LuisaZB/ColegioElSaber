@@ -28,9 +28,11 @@
 
                                 <!-- Botón -->
                                 <div class="mt-20">
-                                    <a class="btn text-light fs-5 mb-3 mt-3 rounded-0" type="submit" role="button" style="background-color: #0CBBC7;">
-                                        [[#{login.login}]]
-                                    </a>
+                                    <button class="btn text-light fs-5 mb-3 mt-3 rounded-0" type="submit" style="background-color: #0CBBC7;">
+                                        <span class="btn"><i class="fas fa-sign-in-alt"></i>
+                                            [[#{login.login}]]</span></button>
+                                        
+                                    </button>
                                 </div>
                                 </form>
                         </div>
@@ -44,7 +46,7 @@
             </div>
             <br></br>
             <div th:if="${param.error != null}">
-                <a th:href="@{/registro/recordar}">
+                <h3>[[#{error.login}]]</h3>
                 
             </div>
         <footer th:replace="~{layout/plantilla :: footer}"/>

@@ -39,6 +39,16 @@
                                             <th>[[#{notas.estado}]]</th>
                                             <th></th></tr>
                                     </thead>
+                                    <tbody>
+                                        <tr th:each="nota : ${notas}">
+                                            <td>[[${nota.codigo}]]</td>
+                                            <td>[[${nota.materia}]]</td>
+                                            <td>[[${nota.profesor}]]</td>
+                                            <td>[[${nota.notaProyecto}]]</td>
+                                            <td>[[${nota.notaFinal}]]</td>
+                                            <td>[[${nota.estado}]]</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
