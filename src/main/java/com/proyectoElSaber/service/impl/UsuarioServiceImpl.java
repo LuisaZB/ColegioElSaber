@@ -78,5 +78,11 @@ public class UsuarioServiceImpl implements UsuarioService {
     public boolean existeUsuarioPorUsernameOCorreoONoDeCarnet(String username, String correo, String noDeCarnet) {
         return usuarioDao.existsByUsernameOrCorreoOrNoDeCarnet(username, correo,noDeCarnet);
     }
+
+    @Override
+    @Transactional
+    public void eliminarPorNoDeCarnet(String noDeCarnet) {
+        usuarioDao.eliminarPorNoDeCarnet(noDeCarnet);
+    }
 }
 

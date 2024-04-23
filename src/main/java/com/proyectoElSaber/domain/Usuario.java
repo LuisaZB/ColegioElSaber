@@ -25,6 +25,7 @@ public class Usuario implements Serializable {
     private String password;
     private String correo;
     private String rol;
+    @Column(name = "seccion")
     private String seccion;
     private boolean activo;
 
@@ -34,7 +35,7 @@ public class Usuario implements Serializable {
     public Usuario(String noDeCarnet, String username, String password, String correo, String rol, String seccion, boolean activo) {
         this.noDeCarnet = noDeCarnet;
         this.username = username;
-//        this.subirFoto = subirFoto;
+//      this.subirFoto = subirFoto;
         this.password = password;
         this.correo = correo;
         this.rol = rol;

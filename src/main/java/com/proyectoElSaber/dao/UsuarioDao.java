@@ -3,6 +3,8 @@ package com.proyectoElSaber.dao;
 import com.proyectoElSaber.domain.Usuario;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 public interface UsuarioDao extends JpaRepository<Usuario, Long> {    
     Usuario findByUsername(String username);
@@ -13,4 +15,8 @@ public interface UsuarioDao extends JpaRepository<Usuario, Long> {
     Usuario findByUsernameOrCorreoOrNoDeCarnet(String username, String correo, String noDeCarnet);
 
     boolean existsByUsernameOrCorreoOrNoDeCarnet(String username, String correo, String noDeCarnet);
+    
+    @Query(nativeQuery = true,
+            value = "DELETE * FROM usuario where usuario.no_de_carnet = noDeCarnet ")
+    public void eliminarPorNoDeCarnet(@Param("noDeCarnet") String noDeCarnet);
 }
