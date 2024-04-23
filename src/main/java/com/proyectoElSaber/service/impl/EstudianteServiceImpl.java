@@ -16,14 +16,8 @@ public class EstudianteServiceImpl implements EstudianteService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Estudiante> getEstudiantes(boolean trabajaActualmenteEncargado, boolean trabajaActualmenteEncargado2) {
+    public List<Estudiante> getEstudiantes() {
         return estudianteDao.findAll();
-    }
-    
-    @Override
-    @Transactional(readOnly = true)
-    public Estudiante getEstudiante(Estudiante estudiante) {
-        return estudianteDao.findById(estudiante.getNoDeCarnet()).orElse(null);
     }
 
     @Override
@@ -45,5 +39,8 @@ public class EstudianteServiceImpl implements EstudianteService {
         estudianteDao.buscarPorNoDeCarnet(noDeCarnet);
     }
 
-    
+    public Estudiante getEstudiante(Estudiante estudiante) {
+        return estudianteDao.findById(estudiante.getNoDeCarnet()).orElse(null);
+    }
+
 }

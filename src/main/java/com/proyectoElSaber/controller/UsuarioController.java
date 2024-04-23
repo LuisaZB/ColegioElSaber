@@ -1,7 +1,6 @@
 package com.proyectoElSaber.controller;
 
 import com.proyectoElSaber.domain.Usuario;
-import com.proyectoElSaber.service.FirebaseStorageService;
 import com.proyectoElSaber.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -16,8 +15,6 @@ public class UsuarioController {
 
     @Autowired
     private UsuarioService usuarioService;
-    @Autowired
-    private FirebaseStorageService firebaseStorageService;
 
     @RequestMapping("/usuario")
     public String page(Model model) {

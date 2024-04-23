@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface EstudianteService {
 
-    List<Estudiante> getEstudiantes(boolean trabajaActualmenteEncargado, boolean trabajaActualmenteEncargado2);
+    List<Estudiante> getEstudiantes();
 
     Estudiante getEstudiante(Estudiante estudiante);
 
