@@ -1,4 +1,3 @@
-
 package com.proyectoElSaber.service.impl;
 
 import com.proyectoElSaber.dao.EstudianteDao;
@@ -9,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
 @Service
 public class EstudianteServiceImpl implements EstudianteService {
 
@@ -18,17 +16,15 @@ public class EstudianteServiceImpl implements EstudianteService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Estudiante> getEstudiantes() {
-        var lista = estudianteDao.findAll();
-        
-        return lista;
+    public List<Estudiante> getEstudiantes(boolean trabajaActualmenteEncargado, boolean trabajaActualmenteEncargado2) {
+        return estudianteDao.findAll();
     }
-
-//    @Override
-//    @Transactional(readOnly = true)
-//    public Estudiante getEstudiantes(Estudiante estudiante) {
-//        return estudianteDao.findByIdEstudiante(estudiante.getIdEstudiante()).orElse(null);
-//    }
+    
+    @Override
+    @Transactional(readOnly = true)
+    public Estudiante getEstudiante(Estudiante estudiante) {
+        return estudianteDao.findById(estudiante.getNoDeCarnet()).orElse(null);
+    }
 
     @Override
     public void save(Estudiante estudiante) {
@@ -41,9 +37,9 @@ public class EstudianteServiceImpl implements EstudianteService {
     }
 
     @Override
-    public List<Estudiante> buscarPorEstudiante(Long idDeEstudiante) {
-        return estudianteDao.findByIdEstudiante(idDeEstudiante);
+    public void buscarPorEstudiante(String noDeCarnet) {
+        estudianteDao.buscarPorNoDeCarnet(noDeCarnet);
     }
-    
+
     
 }

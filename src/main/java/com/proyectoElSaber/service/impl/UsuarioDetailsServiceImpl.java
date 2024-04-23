@@ -38,7 +38,7 @@ public class UsuarioDetailsServiceImpl implements UsuarioDetailsService, UserDet
             throw new UsernameNotFoundException(username);
         }
         session.removeAttribute("usuarioImagen");
-        session.setAttribute("usuarioImagen", usuario.getSubirFoto());
+//        session.setAttribute("usuarioImagen", usuario.getSubirFoto());
         session.setAttribute("noDeCarnet", usuario.getNoDeCarnet());
         //Si está acá es porque existe el usuario... sacamos los roles que tiene
         var roles = new ArrayList<GrantedAuthority>();

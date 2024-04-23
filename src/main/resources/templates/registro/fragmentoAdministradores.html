@@ -6,7 +6,7 @@
         <!-- Sección principal para mostrar form de contacto-->
         <section th:fragment="registroAdministradores" id="registroAdministradores">
             <div class="container p-2" >
-                <form th:action="@{/registroAdministradores}" th:object="${administrador}"
+                <form th:action="@{/registroAdministradores}" th:object="${administradores}"
                       method="POST" class="was-validated" enctype="multipart/form-data" >
                     <div th:if="${mensajeConfirmacion}" class="alert alert-success" role="alert">
                         <p th:text="${mensajeConfirmacion}"></p>
