@@ -31,7 +31,7 @@ public class AdministrarController {
     @GetMapping("/estudiante/eliminar/{noDeCarnet}")
     public String estudianteEliminar(Estudiante estudiante) {
         estudianteService.delete(estudiante);
-        return "redirect:/registro/fragmentoAdministrar";
+        return "/registro/fragmentoAdministrar";
     }
 }
 
