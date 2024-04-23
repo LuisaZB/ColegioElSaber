@@ -4,9 +4,12 @@
  */
 package com.proyectoElSaber.controller;
 
+import com.proyectoElSaber.service.EstudianteService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -15,9 +18,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class DatosPersonalesController {
     
+    @Autowired
+    private EstudianteService estudianteService;
+    
     @RequestMapping("/datospersonales")
-    public String page(Model model) {
-        model.addAttribute("attribute", "value");
+        public String page(@RequestParam(value = "noDeCarnet") String noDeCarnet, Model model) {
+        var estudiantes = estudianteService.findByNoDeCarnet(noDeCarnet);
+        model.addAttribute("estudiantes", estudiantes);
         return "estudiante/datos";
     }
     

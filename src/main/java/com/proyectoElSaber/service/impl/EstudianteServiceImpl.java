@@ -29,6 +29,10 @@ public class EstudianteServiceImpl implements EstudianteService {
     public void delete(Estudiante estudiante) {
         estudianteDao.delete(estudiante);
     }
+    @Override
+    public List<Estudiante> findByNoDeCarnet(String noDeCarnet) {
+        return estudianteDao.findByNoDeCarnet(noDeCarnet);
+    }
 
     @Override
     public void buscarPorEstudiante(String noDeCarnet) {

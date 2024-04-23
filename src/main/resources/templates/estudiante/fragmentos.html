@@ -8,7 +8,7 @@
         <section th:fragment="descripcionNotas" id="descripcionNotas" style="background-color: #EDFEFF;">
             <div class="container" >
                 <div class="row">
-                    <div class="col-md-9"></div>
+                    <div class="col-md-3"></div>
                 </div>
                 <div class="text-center mt-3 p-1">
                     <!-- Titulo -->
@@ -65,7 +65,7 @@
         <section th:fragment="datosDescripcion" id="datosDescripcion" >
             <div class="container" >
                 <div class="row">
-                    <div class="col-md-9"></div>
+                    <div class="col-md-3"></div>
                 </div>
                 <div class="text-center mt-3 p-1">
                     <!-- Titulo -->
@@ -107,144 +107,194 @@
             </div>
         </section>
         <section th:fragment="datosEstudiante" id="datosEstudiante" style="background-color: #EDFEFF;">
-            <div class="container">
+            <div class="container" th:each="estudiante : ${estudiantes}">
                 <div class="text-center mt-3 p-1">
                     <!-- Titulo -->
                     <h3>Datos del Estudiante</h3>
                 </div>
+
                 <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Nombre Completo: </h5>
-                        </div>
+                    <div class="col-md-3">
+                        <h5>Nombre Completo:</h5> 
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.nombreCompleto}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>No. de Carnet: </h5>
-                        </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-3">
+                    <h5>No. de Carnet: </h5>
+                </div>
+                <div class="col-md-9">
+                    <h5>[[${estudiante.noDeCarnet}]]</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>No. de Identificación:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.noDeIdentificacion}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>No. de Identificación: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Fecha de Nacimiento:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.fechaDeNacimiento}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Fecha de Nacimiento: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>País de Orígen:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.paisDeOrigen}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>País de Orígen: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Correo Institucional:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.correoInstitucional}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Correo Institucional: </h5>
-                        </div>
+            </div>
+            <div class="text-center mt-3 p-1">
+                <!-- Titulo -->
+                <h3>Dirección de Residencia</h3>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Dirección:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.direccion}]]</h5>
                     </div>
                 </div>
-                <div class="text-center mt-3 p-1">
-                    <!-- Titulo -->
-                    <h3>Dirección de Residencia</h3>
-                </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Dirección: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Teléfono Habitación:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.nombreHabitacion}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Teléfono Habitación: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Provincia:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.provincia}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Provincia: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Cantón:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.canton}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Cantón: </h5>
-                        </div>
+            </div>
+            <div class="text-center mt-3 p-1">
+                <!-- Titulo -->
+                <h3>Datos del Encargado</h3>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Nombre Completo:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.nombreCompletoEncargado}]]</h5>
                     </div>
                 </div>
-                <div class="text-center mt-3 p-1">
-                    <!-- Titulo -->
-                    <h3>Datos del Encargado</h3>
-                </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Nombre Completo: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>No. de Identificación:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.noDeIdentificacionEncargado}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>No. de Identificación: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Teléfono Móvil:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.telefonoMovilEncargado}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Teléfono Movil: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Correo Electrónico:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.correoElectronicoEncargado}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Correo Electrónico: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Trabaja Actualmente:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.trabajaActualmenteEncargado}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Trabaja Actualmente: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Lugar de Trabajo:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.lugarDeTrabajoEncargado}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Lugar de Trabajo: </h5>
-                        </div>
+            </div>
+            <div class="row">
+                <div class="center">
+                    <div class="col-md-3">
+                        <h5>Teléfono Trabajo:</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <h5>[[${estudiante.telefonoTrabajoEncargado}]]</h5>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="center">
-                        <div class="col-md-9">
-                            <h5>Teléfono Trabajo: </h5>
-                        </div>
-                    </div>
-                </div>
+            </div>
             </div>
         </section>
         <section th:fragment="horarioDescripcion" id="horarioDescripcion" style="background-color: #EDFEFF;" >
             <div class="container" >
                 <div class="row">
-                    <div class="col-md-9"></div>
+                    <div class="col-md-3"></div>
                 </div>
                 <div class="text-center mt-3 p-1">
                     <!-- Titulo -->

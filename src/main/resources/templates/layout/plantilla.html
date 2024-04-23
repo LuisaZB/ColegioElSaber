@@ -42,7 +42,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <li class="nav-item px-2" sec:authorize="!isAuthenticated()"><a class="nav-link" th:href="@{/servicios}">[[#{plantilla.servicios}]]</a></li>
                             <li class="nav-item px-2" sec:authorize="!isAuthenticated()"><a class="nav-link" th:href="@{/clubes}">[[#{plantilla.clubes}]]</a></li>
                             <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ESTUDIANTE')"><a class="nav-link" th:href="@{/notas(noDeCarnet=${session.noDeCarnet})}">[[#{estudiante.notas}]]</a></li>
-                            <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ESTUDIANTE')"><a class="nav-link" th:href="@{/datospersonales(seccion=${session.seccion})}">[[#{estudiante.datos}]]</a></li>
+                            <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ESTUDIANTE')"><a class="nav-link" th:href="@{/datospersonales(noDeCarnet=${session.noDeCarnet})}">[[#{estudiante.datos}]]</a></li>
                             <li class="nav-item px-2" sec:authorize="hasRole('ROLE_ESTUDIANTE')"><a class="nav-link" th:href="@{/horario(seccion=${session.seccion})}">[[#{estudiante.horario}]]</a></li>
                             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse" sec:authorize="hasRole('ROLE_ADMIN')">
                                 <ul class="navbar-nav">
