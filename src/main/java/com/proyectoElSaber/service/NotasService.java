@@ -22,5 +22,6 @@ public interface NotasService {
 
    
     public List<Notas> findByNoDeCarnet(String noDeCarnet);
+    public List<Notas> findByProfesor(String username);
     public List<Notas> metodoNativo(String noDeCarnet);
 }

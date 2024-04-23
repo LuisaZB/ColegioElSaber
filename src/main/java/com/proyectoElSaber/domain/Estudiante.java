@@ -32,7 +32,7 @@ private static final long serialVersionUID = 1L;
     private String noDeIdentificacionEncargado;  
     private String telefonoMovilEncargado;  
     private String correoElectronicoEncargado;  
-    private boolean trabajaActualmenteEncargado;  
+    private String trabajaActualmenteEncargado;  
     private String lugarDeTrabajoEncargado;  
     private String telefonoTrabajoEncargado;
     
@@ -45,7 +45,7 @@ private static final long serialVersionUID = 1L;
     @Column(name = "correo_electronico_encargado_2")
     private String correoElectronicoEncargado2;
     @Column(name = "trabaja_actualmente_encargado_2")
-    private boolean trabajaActualmenteEncargado2;
+    private String trabajaActualmenteEncargado2;
     @Column(name = "lugar_de_trabajo_encargado_2")
     private String lugarDeTrabajoEncargado2;
     @Column(name = "telefono_trabajo_encargado_2")
@@ -54,7 +54,7 @@ private static final long serialVersionUID = 1L;
     public Estudiante() {
     }
 
-    public Estudiante(String noDeCarnet, String seccion, String nombreCompleto, String noDeIdentificacion, String fechaDeNacimiento, String paisDeOrigen, String correoInstitucional, String direccion, String canton, String provincia, String telefonoHabitacion, String telefonoAdicional, String nombreCompletoEncargado, String noDeIdentificacionEncargado, String telefonoMovilEncargado, String correoElectronicoEncargado, boolean trabajaActualmenteEncargado, String lugarDeTrabajoEncargado, String telefonoTrabajoEncargado, String nombreCompletoEncargado2, String noDeIdentificacionEncargado2, String telefonoMovilEncargado2, String correoElectronicoEncargado2, boolean trabajaActualmenteEncargado2, String lugarDeTrabajoEncargado2, String telefonoTrabajoEncargado2) {
+    public Estudiante(String noDeCarnet, String seccion, String nombreCompleto, String noDeIdentificacion, String fechaDeNacimiento, String paisDeOrigen, String correoInstitucional, String direccion, String canton, String provincia, String telefonoHabitacion, String telefonoAdicional, String nombreCompletoEncargado, String noDeIdentificacionEncargado, String telefonoMovilEncargado, String correoElectronicoEncargado, String trabajaActualmenteEncargado, String lugarDeTrabajoEncargado, String telefonoTrabajoEncargado, String nombreCompletoEncargado2, String noDeIdentificacionEncargado2, String telefonoMovilEncargado2, String correoElectronicoEncargado2, String trabajaActualmenteEncargado2, String lugarDeTrabajoEncargado2, String telefonoTrabajoEncargado2) {
         this.noDeCarnet = noDeCarnet;
         this.seccion = seccion;
         this.nombreCompleto = nombreCompleto;

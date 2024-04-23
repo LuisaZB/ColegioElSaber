@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"></header>
+
+        <section th:fragment="editarNota">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form method="POST"
+                          th:action="@{/nota/guardar}" 
+                          th:object="${notas}"
+                          class="was-validated">
+                        <input type="hidden" name="codigo" th:field="*{codigo}"/>
+                        <section th:fragment="botonesEditar">
+                            <div class="container py-4 mb-4 bg-light">
+                                <div class="row">
+
+                                    <div class="col-md-4 d-grid">
+                                        <button type="submit" class="btn btn-success">
+                                            <i class="fas fa-check"></i> [[#{accion.guardar}]]
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section> 
+                        <div id=details>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4>[[#{accion.actualizar}]]</h4>
+                                            </div>
+                                            <div class="card-body">
+
+                                                <div class="mb-3">
+                                                    <label for="noDeCarnet">No de Carnet Estudiante</label>
+                                                    <input type="text" class="form-control" name="noDeCarnet" th:field="*{noDeCarnet}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="materia">Materia</label>
+                                                    <input type="text" class="form-control" name="materia" th:field="*{materia}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="usernameProfesor">Username Profesor</label>
+                                                    <input type="text" class="form-control" name="profesor" th:field="*{profesor}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="notaProyecto">Nota Proyecto</label>
+                                                    <input type="text" class="form-control" name="notaProyecto" th:field="*{notaProyecto}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="notaFinal">Nota Final</label>
+                                                    <input type="text" class="form-control" name="notaFinal" th:field="*{notaFinal}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="notaFinal">Estado</label>
+                                                    <input type="text" class="form-control" name="estado" th:field="*{estado}" required="true"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        
+        <footer th:replace="layout/plantilla :: footer"></footer>
+    </body>
+</html>

@@ -53,5 +53,9 @@ public class NotasServiceImpl implements NotasService {
     public List<Notas> findByNoDeCarnet(String noDeCarnet) {
         return notasDao.findByNoDeCarnet(noDeCarnet);
     }
+    @Override
+    public List<Notas> findByProfesor(String username){
+        return notasDao.findByProfesor(username) ;
+    }
 
 }

@@ -35,7 +35,7 @@
                                             <td>[[${contacto.mensaje}]]</td>
                                             <td><a th:href="@{/mensajes/eliminar/}+${contacto.idMensaje}"
                                                    class="btn btn-danger"sec:authorize="hasRole('ROLE_ADMIN')">
-                                                    <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
+                                                    <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a></td>
                                     </tbody>
                                 </table>
                             </div>

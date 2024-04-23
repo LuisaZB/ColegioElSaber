@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla::head">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"></header>
+
+        <section th:fragment="descripcionNotas" id="descripcionNotas" style="background-color: #EDFEFF;">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="text-center mt-3 p-1">
+                    <!-- Titulo -->
+                    <h1>Notas</h1>
+                </div>
+            </div>
+        </section>
+        <section th:fragment="tablaNotas" id="tablaNotas">
+            <div class="container">
+                <div class="row">
+                    <div class="center">
+                        <div class="card">
+                            <div class="card-header">
+                            </div>
+
+
+                            <table class="table table-striped table-hover">
+                                <button 
+                                    type="button" 
+                                    class="btn btn-info btn-block" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#agregarNota"> 
+                                    <i class="fas fa-plus"></i> Registrar Nota
+                                </button>
+                                <tr>
+                                    <th></th>
+                                    <th>[[#{notas.codigo}]]</th>
+                                    <th>[[#{notas.materia}]]</th>
+                                    <th>No. De Carnet Estudiante</th>
+                                    <th>[[#{notas.proyecto}]]</th>
+                                    <th>[[#{notas.final}]]</th>
+                                    <th>[[#{notas.estado}]]</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="nota : ${notas}">
+                                        <td></td>
+                                        <td>[[${nota.codigo}]]</td>
+                                        <td>[[${nota.materia}]]</td>
+                                        <td>[[${nota.noDeCarnet}]]</td>
+                                        <td>[[${nota.notaProyecto}]]</td>
+                                        <td>[[${nota.notaFinal}]]</td>
+                                        <td>[[${nota.estado}]]</td>
+                                        <td></td>
+                                        <td>
+                                            <a th:href="@{'/nota/eliminar/' + ${nota.codigo}}"
+                                               class="btn btn-danger"
+                                               sec:authorize="hasRole('ROLE_PROFESOR')">
+                                                <i class="fas fa-trash"></i> [[#{accion.eliminar}]]
+                                            </a>
+                                        </td>
+                                        <td><a th:href="@{'/nota/modificar/' + ${nota.codigo}}"
+                                               class="btn btn-primary"sec:authorize="hasRole('ROLE_PROFESOR')">
+                                                <i class="fas fa-pencil"></i>Modificar</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section th:fragment="agregarNota">
+            <div id="agregarNota" 
+                 class="modal fade" 
+                 tabindex="-1" 
+                 aria-labelledby="exampleModalLabel" 
+                 aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title">Registrar Nota</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> 
+                        <form th:action="@{/nota/guardar}" th:object="${nota}"
+                              method="POST" class="was-validated" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="noDeCarnet">No de Carnet Estudiante</label>
+                                    <input type="text" class="form-control" name="noDeCarnet" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="materia">Materia</label>
+                                    <input type="text" class="form-control" name="materia" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="usernameProfesor">Username Profesor</label>
+                                    <input type="text" class="form-control" name="profesor" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="notaProyecto">Nota Proyecto</label>
+                                    <input type="text" class="form-control" name="notaProyecto" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="notaFinal">Nota Final</label>
+                                    <input type="text" class="form-control" name="notaFinal" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="notaFinal">Estado</label>
+                                    <input type="text" class="form-control" name="estado" required="true"/>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer th:replace="layout/plantilla :: footer"></footer>
+    </body>
+</html>
