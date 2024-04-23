@@ -10,7 +10,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface EstudianteDao extends JpaRepository<Estudiante, String> {
     
-//    List<Estudiante> findByNoDeCarnet(String noDeCarnet);
+    List<Estudiante> findByNoDeCarnet(String noDeCarnet);
     
     @Query(nativeQuery = true,
             value = "SELECT * FROM estudiantes where estudiante.no_de_carnet = noDeCarnet ")
