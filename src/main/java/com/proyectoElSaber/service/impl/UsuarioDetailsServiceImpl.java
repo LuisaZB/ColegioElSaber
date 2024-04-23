@@ -40,6 +40,7 @@ public class UsuarioDetailsServiceImpl implements UsuarioDetailsService, UserDet
         session.removeAttribute("usuarioImagen");
 //        session.setAttribute("usuarioImagen", usuario.getSubirFoto());
         session.setAttribute("noDeCarnet", usuario.getNoDeCarnet());
+        session.setAttribute("seccion", usuario.getSeccion());
         //Si está acá es porque existe el usuario... sacamos los roles que tiene
         var roles = new ArrayList<GrantedAuthority>();
            //Se sacan los roles

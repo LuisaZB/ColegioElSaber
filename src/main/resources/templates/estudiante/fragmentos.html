@@ -30,11 +30,9 @@
 
                             <table class="table table-striped table-hover">
                                 <thead class="table-dark">
-                                    <form th:action="@{/notas}" method="get">
-                                        <input type="hidden" name="noDeCarnet" th:value="${session.noDeCarnet}">
-                                            <button type="submit">Ver Notas</button>
-                                    </form>
+
                                     <tr>
+                                        <th></th>
                                         <th>[[#{notas.codigo}]]</th>
                                         <th>[[#{notas.materia}]]</th>
                                         <th>[[#{notas.profesor}]]</th>
@@ -45,12 +43,14 @@
                                 </thead>
                                 <tbody>
                                     <tr th:each="nota : ${notas}">
+                                        <td></td>
                                         <td>[[${nota.codigo}]]</td>
                                         <td>[[${nota.materia}]]</td>
                                         <td>[[${nota.profesor}]]</td>
                                         <td>[[${nota.notaProyecto}]]</td>
                                         <td>[[${nota.notaFinal}]]</td>
                                         <td>[[${nota.estado}]]</td>
+                                        <td></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -267,21 +267,156 @@
                                 <div>
                                     <table class="table table-striped table-hover">
                                         <thead class="table-dark">
-                                            <tr><th></th>
-
-                                                <th>[[#{horario.seccion}]]</th>
+                                            <tr th:each="dato : ${datos}"><th></th>
+                                                <th>[[${dato.seccion}]]</th>
                                                 <th>[[#{horario.lunes}]]</th>
                                                 <th>[[#{horario.martes}]]</th>
                                                 <th>[[#{horario.miercoles}]]</th>
                                                 <th>[[#{horario.jueves}]]</th>
                                                 <th>[[#{horario.viernes}]]</th>
-
                                                 <th></th></tr>
                                         </thead>
                                         <tbody>
-
-
-
+                                            <tr th:each="dato : ${datos}">
+                                                <td></td>
+                                                <td>Lección 1</td>
+                                                <td>[[${dato.leccionL1}]]</td>
+                                                <td>[[${dato.leccionK1}]]</td>
+                                                <td>[[${dato.leccionM1}]]</td>
+                                                <td>[[${dato.leccionJ1}]]</td>
+                                                <td>[[${dato.leccionV1}]]</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr th:each="dato : ${datos}">
+                                                <td></td>
+                                                <td>Lección 2</td>
+                                                <td>[[${dato.leccionL2}]]</td>
+                                                <td>[[${dato.leccionK2}]]</td>
+                                                <td>[[${dato.leccionM2}]]</td>
+                                                <td>[[${dato.leccionJ2}]]</td>
+                                                <td>[[${dato.leccionV2}]]</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Recreo</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Recreo</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr th:each="dato : ${datos}">
+                                                <td></td>
+                                                <td>Lección 3</td>
+                                                <td>[[${dato.leccionL3}]]</td>
+                                                <td>[[${dato.leccionK3}]]</td>
+                                                <td>[[${dato.leccionM3}]]</td>
+                                                <td>[[${dato.leccionJ3}]]</td>
+                                                <td>[[${dato.leccionV3}]]</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr th:each="dato : ${datos}">
+                                                <td></td>
+                                                <td>Lección 4</td>
+                                                <td>[[${dato.leccionL4}]]</td>
+                                                <td>[[${dato.leccionK4}]]</td>
+                                                <td>[[${dato.leccionM4}]]</td>
+                                                <td>[[${dato.leccionJ4}]]</td>
+                                                <td>[[${dato.leccionV4}]]</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Recreo</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Recreo</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr th:each="dato : ${datos}">
+                                                <td></td>
+                                                <td>Lección 5</td>
+                                                <td>[[${dato.leccionL5}]]</td>
+                                                <td>[[${dato.leccionK5}]]</td>
+                                                <td>[[${dato.leccionM5}]]</td>
+                                                <td>[[${dato.leccionJ5}]]</td>
+                                                <td>[[${dato.leccionV5}]]</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr th:each="dato : ${datos}">
+                                                <td></td>
+                                                <td>Lección 6</td>
+                                                <td>[[${dato.leccionL6}]]</td>
+                                                <td>[[${dato.leccionK6}]]</td>
+                                                <td>[[${dato.leccionM6}]]</td>
+                                                <td>[[${dato.leccionJ6}]]</td>
+                                                <td>[[${dato.leccionV6}]]</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Almuerzo</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Almuerzo</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr th:each="dato : ${datos}">
+                                                <td></td>
+                                                <td>Lección 7</td>
+                                                <td>[[${dato.leccionL7}]]</td>
+                                                <td>[[${dato.leccionK7}]]</td>
+                                                <td>[[${dato.leccionM7}]]</td>
+                                                <td>[[${dato.leccionJ7}]]</td>
+                                                <td>[[${dato.leccionV7}]]</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr th:each="dato : ${datos}">
+                                                <td></td>
+                                                <td>Lección 8</td>
+                                                <td>[[${dato.leccionL8}]]</td>
+                                                <td>[[${dato.leccionK8}]]</td>
+                                                <td>[[${dato.leccionM8}]]</td>
+                                                <td>[[${dato.leccionJ8}]]</td>
+                                                <td>[[${dato.leccionV8}]]</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Recreo</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Recreo</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr th:each="dato : ${datos}">
+                                                <td></td>
+                                                <td>Lección 9</td>
+                                                <td>[[${dato.leccionL9}]]</td>
+                                                <td>[[${dato.leccionK9}]]</td>
+                                                <td>[[${dato.leccionM9}]]</td>
+                                                <td>[[${dato.leccionJ9}]]</td>
+                                                <td>[[${dato.leccionV9}]]</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr th:each="dato : ${datos}">
+                                                <td></td>
+                                                <td>Lección 10</td>
+                                                <td>[[${dato.leccionL10}]]</td>
+                                                <td>[[${dato.leccionK10}]]</td>
+                                                <td>[[${dato.leccionM10}]]</td>
+                                                <td>[[${dato.leccionJ10}]]</td>
+                                                <td>[[${dato.leccionV10}]]</td>
+                                                <td></td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
