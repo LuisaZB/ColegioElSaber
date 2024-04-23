@@ -23,7 +23,7 @@ public class RegistroProfesoresController {
     }
     
     @PostMapping("/registroProfesores")
-    public String guardarContacto(@ModelAttribute Profesor profesor, Model model) {
+    public String guardarProfesor(@ModelAttribute Profesor profesor, Model model) {
         model.addAttribute("mensajeConfirmacion", "Su registro a sido guardado correctamente.");
         profesorService.save(profesor);
         return "/registro/registroProfesores";

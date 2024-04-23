@@ -6,7 +6,7 @@
         <!-- Sección principal para mostrar form de contacto-->
         <section th:fragment="registroEstudiantes" id="registroEstudiantes">
             <div class="container p-1" >
-                <form th:action="@{/registroEstudiantes}" th:object="${estudiante}"
+                <form th:action="@{/estudiante/guardar}" th:object="${estudiante}"
                       method="POST" class="was-validated" enctype="multipart/form-data" >
                     <div th:if="${mensajeConfirmacion}" class="alert alert-success" role="alert">
                         <p th:text="${mensajeConfirmacion}"></p>
@@ -20,10 +20,6 @@
                                 <label for="seccion">[[#{crea.seccion}]]</label>
                                 <input type="text" class="form-control" name="seccion" required="true"/>
                             </div>
-                            <!--<div class="mb-3 col">
-                                <label for="subirFoto">[[#{crea.imagen}]]</label>
-                                <input class="form-control" type="file" name="subirFoto" onchange="readURL(this);"/>
-                            </div> -->
                         </div>
                         <div class="row">
                             <div class="mb-3 col">
@@ -132,6 +128,120 @@
                 </form>
             </div>
             <br></br>
+        </section>
+        <section th:fragment="editarEstudiante" id="editarEstudiante">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form method="POST" th:action="@{/estudiante/guardar}" th:object="${estudiante}" class="was-validated">
+                        <input type="hidden" name="idEstudiante" th:field="*{idEstudiante}" />
+                        <section th:fragment="botonesEditar">
+                            <div class="container py-4 mb-4 bg-light">
+                                <div class="row">
+                                    <div class="col-md-4 d-grid">
+                                        <button type="submit" class="btn btn-success">
+                                            <i class="fas fa-check"></i> Guardar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section> 
+                        <div id="details">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4>Actualizar Estudiante</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-3">
+                                                    <label for="noDeCarnet">No de Carnet</label>
+                                                    <input type="text" class="form-control" name="noDeCarnet" th:field="*{noDeCarnet}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="seccion">Sección</label>
+                                                    <input type="text" class="form-control" name="seccion" th:field="*{seccion}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="nombreCompleto">Nombre Completo</label>
+                                                    <input type="text" class="form-control" name="nombreCompleto" th:field="*{nombreCompleto}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="noDeIdentificacion">No de Identificación</label>
+                                                    <input type="text" class="form-control" name="noDeIdentificacion" th:field="*{noDeIdentificacion}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="fechaDeNacimiento">Fecha de Nacimiento</label>
+                                                    <input type="text" class="form-control" name="fechaDeNacimiento" th:field="*{fechaDeNacimiento}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="paisDeOrigen">País de Origen</label>
+                                                    <input type="text" class="form-control" name="paisDeOrigen" th:field="*{paisDeOrigen}" />
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="correoInstitucional">Correo Institucional</label>
+                                                    <input type="email" class="form-control" name="correoInstitucional" th:field="*{correoInstitucional}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="direccion">Dirección</label>
+                                                    <input type="text" class="form-control" name="direccion" th:field="*{direccion}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="canton">Cantón</label>
+                                                    <input type="text" class="form-control" name="canton" th:field="*{canton}" />
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="provincia">Provincia</label>
+                                                    <input type="text" class="form-control" name="provincia" th:field="*{provincia}" />
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="telefonoHabitacion">Teléfono de Habitación</label>
+                                                    <input type="text" class="form-control" name="telefonoHabitacion" th:field="*{telefonoHabitacion}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="telefonoAdicional">Teléfono Adicional</label>
+                                                    <input type="text" class="form-control" name="telefonoAdicional" th:field="*{telefonoAdicional}" />
+                                                </div>
+                                                <!-- Datos del encargado -->
+                                                <h4 class="mt-3">Datos del Encargado</h4>
+                                                <div class="mb-3">
+                                                    <label for="nombreCompletoEncargado">Nombre Completo Encargado</label>
+                                                    <input type="text" class="form-control" name="nombreCompletoEncargado" th:field="*{nombreCompletoEncargado}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="noDeIdentificacionEncargado">No de Identificación Encargado</label>
+                                                    <input type="text" class="form-control" name="noDeIdentificacionEncargado" th:field="*{noDeIdentificacionEncargado}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="telefonoMovilEncargado">Teléfono Móvil Encargado</label>
+                                                    <input type="text" class="form-control" name="telefonoMovilEncargado" th:field="*{telefonoMovilEncargado}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="correoElectronicoEncargado">Correo Electrónico Encargado</label>
+                                                    <input type="email" class="form-control" name="correoElectronicoEncargado" th:field="*{correoElectronicoEncargado}" required="true"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="trabajaActualmenteEncargado">Trabaja Actualmente Encargado</label>
+                                                    <input type="text" class="form-control" name="trabajaActualmenteEncargado" th:field="*{trabajaActualmenteEncargado}" />
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="lugarDeTrabajoEncargado">Lugar de Trabajo Encargado</label>
+                                                    <input type="text" class="form-control" name="lugarDeTrabajoEncargado" th:field="*{lugarDeTrabajoEncargado}"/>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="telefonoTrabajoEncargado">Teléfono Trabajo Encargado</label>
+                                                    <input type="text" class="form-control" name="telefonoTrabajoEncargado" th:field="*{telefonoTrabajoEncargado}" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
     </body>
 </html>

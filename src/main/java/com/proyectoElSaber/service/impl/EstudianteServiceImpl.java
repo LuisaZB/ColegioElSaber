@@ -21,15 +21,19 @@ public class EstudianteServiceImpl implements EstudianteService {
     }
 
     @Override
+    @Transactional
     public void save(Estudiante estudiante) {
         estudianteDao.save(estudiante);
     }
 
     @Override
+    @Transactional
     public void delete(Estudiante estudiante) {
         estudianteDao.delete(estudiante);
     }
+
     @Override
+    @Transactional
     public List<Estudiante> findByNoDeCarnet(String noDeCarnet) {
         return estudianteDao.findByNoDeCarnet(noDeCarnet);
     }
@@ -39,8 +43,14 @@ public class EstudianteServiceImpl implements EstudianteService {
         estudianteDao.buscarPorNoDeCarnet(noDeCarnet);
     }
 
+    @Transactional
     public Estudiante getEstudiante(Estudiante estudiante) {
         return estudianteDao.findById(estudiante.getNoDeCarnet()).orElse(null);
+    }
+
+    @Override
+    public void eliminarPorNoDeCarnet(String noDeCarnet) {
+        estudianteDao.eliminarPorNoDeCarnet(noDeCarnet);
     }
 
 }

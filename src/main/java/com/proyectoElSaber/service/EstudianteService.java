@@ -15,4 +15,6 @@ public interface EstudianteService {
     public List<Estudiante> findByNoDeCarnet(String noDeCarnet);
 
     void buscarPorEstudiante(String noDeCarnet);
+    
+    public void eliminarPorNoDeCarnet(String noDeCarnet);
 }

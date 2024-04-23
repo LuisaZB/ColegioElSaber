@@ -20,8 +20,8 @@
                                     <tr>
                                         <th>[[#{crea.carnet}]]</th>
                                         <th>[[#{crea.username}]]</th>
+                                        <th>[[#{crea.identificacion}]]</th>
                                         <th>[[#{crea.seccion}]]</th>
-                                        <th>[[#{crea.rol}]]</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
@@ -32,14 +32,12 @@
                                         <td th:text="${estudiante.nombreCompleto}"></td>
                                         <td th:text="${estudiante.noDeIdentificacion}"></td>
                                         <td th:text="${estudiante.seccion}"></td>
-                                        <td>
-                                            <a th:href="@{/estudiante/eliminar/} + ${estudiante.noDeCarnet}" class="btn btn-danger">
-                                                <i class="fas fa-trash"sec:authorize="hasRole('ROLE_ADMIN')"></i> [[#{accion.eliminar}]]
-                                            </a>
-                                            <a th:href="@{/estudiante/modificar/} + ${estudiante.noDeCarnet}" class="btn btn-success">
-                                                <i class="fas fa-pencil"></i> [[#{accion.actualizar}]]
-                                            </a>
-                                        </td>
+                                        <td><a th:href="@{'/estudiante/modificar/' + ${estudiante.idEstudiante}}"
+                                               class="btn btn-primary"sec:authorize="hasRole('ROLE_ADMIN')">
+                                                <i class="fas fa-pencil"></i>Modificar</a>
+                                        <a th:href="@{/estudiante/eliminar/} + ${estudiante.idEstudiante}" class="btn btn-danger">
+                                            <i class="fas fa-trash"sec:authorize="hasRole('ROLE_ADMIN')"></i> [[#{accion.eliminar}]]
+                                        </a></td>
                                     </tr>
                                 </tbody>
                             </table>
