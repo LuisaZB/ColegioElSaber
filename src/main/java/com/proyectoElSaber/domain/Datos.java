@@ -16,7 +16,7 @@ public class Datos implements Serializable {
 
     @Id
     @Column(name = "seccion")
-    private String seccion;
+    private Long seccion;
     @Column(name = "guia")
     private String guia;
     
@@ -128,7 +128,7 @@ public class Datos implements Serializable {
     public Datos() {
     }
 
-    public Datos(String seccion, String guia, String leccionL1, String leccionL2, String leccionL3, String leccionL4, String leccionL5, String leccionL6, String leccionL7, String leccionL8, String leccionL9, String leccionL10, String leccionK1, String leccionK2, String leccionK3, String leccionK4, String leccionK5, String leccionK6, String leccionK7, String leccionK8, String leccionK9, String leccionK10, String leccionM1, String leccionM2, String leccionM3, String leccionM4, String leccionM5, String leccionM6, String leccionM7, String leccionM8, String leccionM9, String leccionM10, String leccionJ1, String leccionJ2, String leccionJ3, String leccionJ4, String leccionJ5, String leccionJ6, String leccionJ7, String leccionJ8, String leccionJ9, String leccionJ10, String leccionV1, String leccionV2, String leccionV3, String leccionV4, String leccionV5, String leccionV6, String leccionV7, String leccionV8, String leccionV9, String leccionV10) {
+    public Datos(Long seccion, String guia, String leccionL1, String leccionL2, String leccionL3, String leccionL4, String leccionL5, String leccionL6, String leccionL7, String leccionL8, String leccionL9, String leccionL10, String leccionK1, String leccionK2, String leccionK3, String leccionK4, String leccionK5, String leccionK6, String leccionK7, String leccionK8, String leccionK9, String leccionK10, String leccionM1, String leccionM2, String leccionM3, String leccionM4, String leccionM5, String leccionM6, String leccionM7, String leccionM8, String leccionM9, String leccionM10, String leccionJ1, String leccionJ2, String leccionJ3, String leccionJ4, String leccionJ5, String leccionJ6, String leccionJ7, String leccionJ8, String leccionJ9, String leccionJ10, String leccionV1, String leccionV2, String leccionV3, String leccionV4, String leccionV5, String leccionV6, String leccionV7, String leccionV8, String leccionV9, String leccionV10) {
         this.seccion = seccion;
         this.guia = guia;
         this.leccionL1 = leccionL1;

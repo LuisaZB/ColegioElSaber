@@ -42,7 +42,7 @@ public class NotasServiceImpl implements NotasService {
         notasDao.delete(notas);
     }
 
-    // Lista de notass con precio entre ordendados por descripción ConsultaAmpliada
+
     @Override
     @Transactional(readOnly = true)
     public List<Notas> metodoNativo(String noDeCarnet) {

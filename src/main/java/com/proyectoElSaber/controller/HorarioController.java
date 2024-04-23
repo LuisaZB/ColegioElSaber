@@ -4,9 +4,13 @@
  */
 package com.proyectoElSaber.controller;
 
+import com.proyectoElSaber.service.DatosService;
+import com.proyectoElSaber.service.NotasService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -14,10 +18,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class HorarioController {
+    @Autowired
+    private DatosService datosService;
     
     @RequestMapping("/horario")
-    public String page(Model model) {
-        model.addAttribute("attribute", "value");
+    public String page(@RequestParam(value = "seccion") Long seccion, Model model) {
+        var datos = datosService.findDatosBySeccion(seccion);
+        model.addAttribute("datos", datos);
         return "estudiante/horario";
     }
     
